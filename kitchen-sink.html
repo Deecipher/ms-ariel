@@ -1,0 +1,890 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Kitchen Sink | Ariel DB | MS</title>
+	<link rel="stylesheet" href="css/app.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet' type='text/css'>
+	<script src="bower_components/modernizr/modernizr.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="/js/masonry.pkgd.min.js"></script>
+</head>
+<body>
+
+	<div id="nav">
+		<div id="nav-bg"></div>
+		<ul>
+			<li>
+				<a id="opn-cls">
+					<img src="http://placehold.it/40" alt="" class="icon">
+					<!-- <span class="title">Open &amp; Close Button</span> -->
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="http://placehold.it/40" alt="" class="icon">
+					<span class="title">Kitchen Sink</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="http://placehold.it/40" alt="" class="icon">
+					<span class="title">Members</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="http://placehold.it/40" alt="" class="icon">
+					<span class="title">My Secure Messages</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="http://placehold.it/40" alt="" class="icon">
+					<span class="title">Process Management</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="http://placehold.it/40" alt="" class="icon">
+					<span class="title">Reports &amp; Documents</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="http://placehold.it/40" alt="" class="icon">
+					<span class="title">Administration</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="http://placehold.it/40" alt="" class="icon">
+					<span class="title">Help</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="page-container">
+
+		<!-- Header -->
+		<header class="row">
+			<div class="large-4 columns">
+				<!-- Client Logo -->
+				<img id="logo" src="http://placehold.it/250x75&text=LOGO+250+x+75" alt="Client Logo">
+			</div>
+			<div class="large-8 columns">
+				<!-- Secondary Nav Items -->
+				<div id="nav-sec">
+					<div class="search">
+						<div class="search-input"><input type="text" placeholder="Search"></div>
+						<a href="#" class="search-submit"><img src="http://placehold.it/30" alt=""></a>
+					</div>
+					<div class="lang">
+						<a href="#" class="active">EN</a> <a href="#">FR</a>
+					</div>
+					<div class="account">
+						company name &nbsp;|&nbsp; name.lastname &nbsp;&nbsp;<img src="http://placehold.it/30" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="large-12 columns">
+				<!-- Page Title -->
+				<div class="breadcrumb">
+					<a href="/dashboard">Breadcrumbs</a> &raquo; <a href="#">Sub Page</a> &raquo; Current Page
+				</div>
+				<h1>Kitchen Sink, This Is An H1</h1>
+			</div>
+		</header>
+
+		<!-- Widget Container -->
+		<div class="row">
+
+			<div id="dashboard" class="js-masonry" data-masonry-options='{ "itemSelector": ".widget-container", "columnWidth": ".large-4" }'>
+				<!-- Widgets -->
+				<div class="widget-container large-8 columns">
+					<div class="widget slider">
+						<h2>Heading 2, Latest News</h2>
+						<div class="pager">
+							<div class="row">
+								<div class="small-12 columns">								
+									<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
+									<span>1 of 2</span>
+									<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
+								</div>
+							</div>
+						</div>
+						<div class="content news">
+							<div class="row">
+								<div class="medium-12 columns">
+									<h3><a href="#">This is an H3</a></h3>
+								</div>
+								<div class="medium-5 columns">
+									<img src="http://placehold.it/1000x1085" alt="">
+								</div>
+								<div class="medium-7 columns">
+									<p class="lead">This is a lead paragraph. It looks a little more prominent than regular paragraphs. Add the "lead" class to a paragraph to use it. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+									<p>This is a standard paragraph. Regular text goes here. Blanditiis voluptate ut ratione, vel et dolores doloremque rem. Architecto temporibus officia rem quos aliquam quis earum quaerat non dicta eaque reiciendis at, nostrum minus, autem doloremque unde. Quae excepturi sint doloribus assumenda blanditiis alias.</p>
+									<a href="#" class="ms-portal-button">Portal Button</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="widget-container large-4 columns">
+					<div class="widget">
+						<div class="widget-expand"></div>
+						<div class="widget-control"></div>
+						<h2>Widget With Accordian, H2</h2>
+						<div class="content accordions">
+							<dl data-accordion="" class="accordion">
+								<dd class="accordion-navigation active">
+									<a href="#panel1a" class="tab-panel">Accordian Tab One</a>
+									<div class="content active" id="panel1a">
+										<ul>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="small-10 columns">
+															<div class="title-only">Accordian Child</div>
+														</div>
+														<div class="small-2 columns">
+															<div class="count">10</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="small-10 columns">
+															<div class="title-only">Accordian Child</div>
+														</div>
+														<div class="small-2 columns">
+															<div class="count">13</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="small-10 columns">
+															<div class="title-only">Accordian Child</div>
+														</div>
+														<div class="small-2 columns">
+															<div class="count">2</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="small-10 columns">
+															<div class="title-only">Accordian Child</div>
+														</div>
+														<div class="small-2 columns">
+															<div class="count">4</div>
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</dd>
+								<dd class="accordion-navigation">
+									<a href="#panel2a" class="tab-panel">Accordian Tab Two</a>
+									<div class="content" id="panel2a">
+										<ul>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="small-10 columns">
+															<div class="title-only">Accordian Child</div>
+														</div>
+														<div class="small-2 columns">
+															<div class="count">3</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="small-10 columns">
+															<div class="title-only">Accordian Child</div>
+														</div>
+														<div class="small-2 columns">
+															<div class="count">4</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="small-10 columns">
+															<div class="title-only">Accordian Child</div>
+														</div>
+														<div class="small-2 columns">
+															<div class="count">1</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="small-10 columns">
+															<div class="title-only">Accordian Child</div>
+														</div>
+														<div class="small-2 columns">
+															<div class="count">4</div>
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+							<a href="#" class="ms-portal-button">Portal Button</a>
+						</div>
+					</div>
+				</div>
+				<div class="widget-container large-4 columns">
+					<div class="widget">
+						<div class="widget-expand"></div>
+						<div class="widget-control"></div>
+						<h2>Widget With Items, H2</h2>
+						<div class="content listing">
+							<ul>
+								<li>
+									<a href="#">
+										<div class="row">
+											<div class="medium-6 columns">
+												<div class="title">Item Title</div>
+												<div class="date">Item Date April, 2014</div>
+											</div>
+											<div class="medium-6 columns">
+												<div class="status text-right">Item Status</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="row">
+											<div class="medium-6 columns">
+												<div class="title">Devision 123</div>
+												<div class="date">for June, 2014</div>
+											</div>
+											<div class="medium-6 columns">
+												<div class="status text-right">Not Started</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="row">
+											<div class="medium-6 columns">
+												<div class="title">Devision 123</div>
+												<div class="date">for April, 2014</div>
+											</div>
+											<div class="medium-6 columns">
+												<div class="status text-right">In Progress</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="row">
+											<div class="medium-6 columns">
+												<div class="title">Devision 123</div>
+												<div class="date">for June, 2014</div>
+											</div>
+											<div class="medium-6 columns">
+												<div class="status text-right">Not Started</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="row">
+											<div class="medium-6 columns">
+												<div class="title">Devision 123</div>
+												<div class="date">for June, 2014</div>
+											</div>
+											<div class="medium-6 columns">
+												<div class="status text-right">Not Started</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<div class="pager text-center">
+								<div class="row">
+									<div class="small-12 columns">								
+										<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
+										<span>1 of 2</span>
+										<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
+									</div>
+								</div>
+							</div>
+							<a href="/inputdata" class="ms-portal-button">Portal Button</a>
+						</div>
+					</div>
+				</div>
+				<div class="widget-container large-4 columns">
+					<div class="widget">
+						<div class="widget-expand"></div>
+						<div class="widget-control"></div>
+						<h2>Widget for Secure Messages, H2</h2>
+						<div class="content listing">
+							<ul>
+								<li class="unread">
+									<a href="#">
+										<div class="row">
+											<div class="medium-12 columns">
+												<div class="from">From Name: John Doe</div>
+												<div class="subject">This is the subject of the...</div>
+												<div class="date-stamp">7:45 AM</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="row">
+											<div class="medium-12 columns">
+												<div class="from">John Doe</div>
+												<div class="subject">This is the subject of the...</div>
+												<div class="date-stamp">9:45 AM</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="unread">
+									<a href="#">
+										<div class="row">
+											<div class="medium-12 columns">
+												<div class="from">John Doe</div>
+												<div class="subject">This is the subject of the...</div>
+												<div class="date-stamp">3:22 PM</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="row">
+											<div class="medium-12 columns">
+												<div class="from">John Doe</div>
+												<div class="subject">This is the subject of the...</div>
+												<div class="date-stamp">10/13/2014</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="unread">
+									<a href="#">
+										<div class="row">
+											<div class="medium-12 columns">
+												<div class="from">John Doe</div>
+												<div class="subject">This is the subject of the...</div>
+												<div class="date-stamp">10/10/2014</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<div class="pager text-center">
+								<div class="row">
+									<div class="small-12 columns">								
+										<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
+										<span>1 of 2</span>
+										<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="ms-portal-button">Create new message</a>
+						</div>
+					</div>
+				</div>
+				<div class="widget-container large-4 columns">
+					<div class="widget">
+						<div class="widget-expand"></div>
+						<div class="widget-control"></div>
+						<h2>Widget for Client Team Members</h2>
+						<div class="content team-img">
+							<p class="intro-desc">An introduction paragraph describing the team or members.</p>
+							<div class="row team-members">
+								<div class="medium-6 columns">
+									<a href="#">
+										<div class="profile-img">
+											<img src="http://placehold.it/500&text=Portrait+500+x+500" alt="">
+										</div>
+										<div class="name">Steve Smith</div>
+										<div class="title">Advisor</div>
+									</a>
+								</div>
+								<div class="medium-6 columns">
+									<a href="#">
+										<div class="profile-img">
+											<img src="http://placehold.it/500&text=Portrait+500+x+500" alt="">
+										</div>
+										<div class="name">Stefani Jones</div>
+										<div class="title">Specialist</div>
+									</a>
+								</div>
+							</div>
+							<div class="pager text-center">
+								<div class="row">
+									<div class="small-12 columns">								
+										<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
+										<span>1 of 7</span>
+										<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="widget-container large-4 columns">
+					<div class="widget">
+						<div class="widget-expand"></div>
+						<div class="widget-control"></div>
+						<h2>Widget for My Company Team</h2>
+						<div class="content listing">
+							<ul>
+								<li>
+									<a href="#">
+										<div class="row">
+											<div class="medium-12 columns">
+												<div class="from">John Doe</div>
+												<div class="subject">This is the subject of the...</div>
+												<div class="date-stamp text-right">Last log-in <br>7:45 AM</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="row">
+											<div class="medium-12 columns">
+												<div class="from">John Doe</div>
+												<div class="subject">This is the subject of the...</div>
+												<div class="date-stamp text-right">Last log-in <br>10/10/2014</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="row">
+											<div class="medium-12 columns">
+												<div class="from">John Doe</div>
+												<div class="subject">This is the subject of the...</div>
+												<div class="date-stamp text-right">Last log-in <br>07/07/2014</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="row">
+											<div class="medium-12 columns">
+												<div class="from">John Doe</div>
+												<div class="subject">This is the subject of the...</div>
+												<div class="date-stamp text-right">Last log-in <br>23/10/2014</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<div class="pager text-center">
+								<div class="row">
+									<div class="small-12 columns">								
+										<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
+										<span>1 of 2</span>
+										<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="ms-portal-button">Create new message</a>
+						</div>
+					</div>
+				</div>
+				<div class="widget-container large-4 columns">
+					<div class="widget">
+						<div class="widget-expand"></div>
+						<div class="widget-control"></div>
+						<h2>Widget for Member Search</h2>
+						<div class="content find">
+							<p>A paragraph. Add a description here if you want.</p>
+							<div class="row collapse">
+								<div class="small-10 columns">
+									<input type="text" placeholder="Search">
+								</div>
+								<div class="small-2 columns text-right">
+									<a href="#">
+										<img src="http://placehold.it/38">
+									</a>
+								</div>
+							</div>
+							<ul>
+								<li><a href="#">Update member data</a></li>
+								<li><a href="#">Request a calculation</a></li>
+								<li><a href="#">Run a forecast</a></li>
+							</ul>
+							<a href="#" class="ms-portal-button">Add a member</a>
+						</div>
+					</div>
+				</div>
+				<div class="widget-container large-4 columns">
+					<div class="widget">
+						<div class="widget-expand"></div>
+						<div class="widget-control"></div>
+						<h2>Accordian Widget For Files & Documents</h2>
+						<div class="content accordions">
+							<dl data-accordion="" class="accordion">
+								<dd class="accordion-navigation active">
+									<a href="#panel1b" class="tab-panel">My documents</a>
+									<div class="content active" id="panel1b">
+										<ul>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="medium-12 columns">
+															<img src="http://placehold.it/33" alt="" class="icon">
+															<div class="title">Name of the file</div>
+															<div class="type-date">Document Type | 00.00.0000</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="medium-12 columns">
+															<img src="http://placehold.it/33" alt="" class="icon">
+															<div class="title">Name of the file</div>
+															<div class="type-date">Document Type | 00.00.0000</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="medium-12 columns">
+															<img src="http://placehold.it/33" alt="" class="icon">
+															<div class="title">Name of the file</div>
+															<div class="type-date">Document Type | 00.00.0000</div>
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</dd>
+								<dd class="accordion-navigation">
+									<a href="#panel2b" class="tab-panel">My reports</a>
+									<div class="content" id="panel2b">
+										<ul>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="medium-12 columns">
+															<img src="http://placehold.it/33" alt="" class="icon">
+															<div class="title">Name of the file</div>
+															<div class="type-date">Document Type | 00.00.0000</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="medium-12 columns">
+															<img src="http://placehold.it/33" alt="" class="icon">
+															<div class="title">Name of the file</div>
+															<div class="type-date">Document Type | 00.00.0000</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="medium-12 columns">
+															<img src="http://placehold.it/33" alt="" class="icon">
+															<div class="title">Name of the file</div>
+															<div class="type-date">Document Type | 00.00.0000</div>
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</dd>
+								<dd class="accordion-navigation">
+									<a href="#panel3b" class="tab-panel">Knowledge &amp; Insights</a>
+									<div class="content" id="panel3b">
+										<ul>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="medium-12 columns">
+															<img src="http://placehold.it/33" alt="" class="icon">
+															<div class="title">Name of the file</div>
+															<div class="type-date">Document Type | 00.00.0000</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="medium-12 columns">
+															<img src="http://placehold.it/33" alt="" class="icon">
+															<div class="title">Name of the file</div>
+															<div class="type-date">Document Type | 00.00.0000</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<div class="row">
+														<div class="medium-12 columns">
+															<img src="http://placehold.it/33" alt="" class="icon">
+															<div class="title">Name of the file</div>
+															<div class="type-date">Document Type | 00.00.0000</div>
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+							<a href="#" class="ms-portal-button">Add a document</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>Data Collection Dialog</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-8 columns main">
+				<div class="row process-state">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					viewBox="0 0 751.5 51" enable-background="new 0 0 751.5 51" xml:space="preserve">
+						<polygon fill="#00ACCD" points="-4.8,0 246.3,0 258.8,25.5 246.3,51 -4.8,51 "/>
+						<polygon fill="none" stroke="#00ACCD" stroke-miterlimit="10" points="254.1,0.5 503.8,0.5 516.1,25.5 503.8,50.5 254.1,50.5 
+						266.4,25.5 "/>
+						<polygon fill="none" stroke="#00ACCD" stroke-miterlimit="10" points="511.4,0.5 751,0.5 751,25.5 751,50.5 511.4,50.5 523.7,25.5 
+						"/>
+					</svg>
+					<div class="large-4 columns">
+						<div class="text-center state current">1. Input Data</div>
+					</div>
+					<div class="large-4 columns">
+						<div class="text-center state">2. Review Data</div>
+					</div>
+					<div class="large-4 columns">
+						<div class="text-center state">3. Submit</div>
+					</div>
+				</div>
+				<dl class="tabs" data-tab>
+					<dd class="active"><a href="#panel1">File View</a></dd>
+					<dd><a href="#panel2">Data View</a></dd>
+					<div id="manual-entry">
+						<div class="plus">+</div>
+						<div class="title">Manual Entry</div>
+					</div>
+				</dl>
+				<div class="tabs-content">
+					<div class="content active" id="panel1">
+						<p>Select the files that contain the data you want to add into the data collection.</p>
+						<div id="file-upload">
+							<div class="cta-text"><b>DROP</b> files here</div>
+							<p>or</p>
+							<div id="add-file" class="ms-portal-button">Select files from your computer</div>
+							<div class="fine-print">Accepted files: CSV, TXT, DTB. Maximum file size 35MB. Having problem uploading a file? Check the <a href="#">Help</a> page.</div>
+						</div>
+						<div id="csv-template">
+							<a href="#">Download a template file with data (.CSV)</a>
+						</div>
+						<div id="upload-verification">
+							<img src="http://placehold.it/25" alt="">
+							<div class="upload">
+								<a href="#">DIV123-Dept1-APR2014.csv</a> imported (67 records)
+								<div class="message">
+									File succefully imported. No errors found.
+								</div>
+								<div class="controls">
+									<a class="remove" href="#">Remove</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content" id="panel2">
+						<div id="inputdata-table"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns text-center">
+						<div class="pager">
+							<div class="row">
+								<div class="small-12 columns">								
+									<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
+									<span>1 of 9</span>
+									<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="medium-6 columns">
+						<a href="#" class="ms-portal-button-noarrow">Cancel</a>
+					</div>
+					<div class="medium-6 columns text-right">
+						<a href="#" class="ms-portal-button-continue">Continue</a>
+					</div>
+				</div>
+			</div>
+			<div class="large-4 columns secondary">
+				<div id="total-summary">
+					<div class="widget">
+						<h2>Data collection summary</h2>
+						<div class="content data-input total-summary">
+							<ul class="key1">
+								<li>Plan:</li>
+								<li>Name:</li>
+								<li>Configuration:</li>
+								<li>Start date:</li>
+								<li>End date:</li>
+								<li>Effective date:</li>
+								<li>Status:</li>
+							</ul>
+							<ul class="data1">
+								<li>PSPP</li>
+								<li>Division 123 - April 2014</li>
+								<li>Single member creation</li>
+								<li>2014-04-01</li>
+								<li>2014-04-30</li>
+								<li>&nbsp;</li>
+								<li>On creation</li>
+							</ul>
+							<div class="subtitle">Data entry summary</div>
+							<ul class="key2">
+								<li>DIV123-Dept1-APR2014.csv</li>
+								<li class="total">Total records:</li>
+							</ul>
+							<ul class="data2">
+								<li>67 records</li>
+								<li class="total">67</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="line-summary">
+					<div class="widget">
+						<h2>1234567890 - Doe, John</h2>
+						<div class="content data-input line-summary accordions">
+							<dl data-accordion="" class="accordion">
+								<dd class="accordion-navigation">
+									<a href="#panel1b" class="tab-panel">Basic member info</a>
+									<div class="content" id="panel1b">
+										<ul class="key1">
+											<li><b>Start date</b></li>
+											<li><b>End date</b></li>
+											<li><b>Earned salary:</b> $/y (00000.00)</li>
+											<li><b>Contribution:</b> $/y (00000.00)</li>
+											<li><b>Salary rate:</b>  $/y (00000.00)</li>
+											<li><b>Service:</b> (days)</li>
+										</ul>
+										<ul class="data1">
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+										</ul>
+									</div>
+								</dd>
+								<dd class="accordion-navigation active">
+									<a href="#panel2b" class="tab-panel">Payroll information</a>
+									<div class="content active" id="panel2b">
+										<ul class="key1">
+											<li><b>Start date</b></li>
+											<li><b>End date</b></li>
+											<li><b>Earned salary:</b> $/y (00000.00)</li>
+											<li><b>Contribution:</b> $/y (00000.00)</li>
+											<li><b>Salary rate:</b>  $/y (00000.00)</li>
+											<li><b>Service:</b> (days)</li>
+										</ul>
+										<ul class="data1">
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+							<div class="row">
+								<div class="medium-6 columns">
+									<div class="close-line-summary cancel">Cancel</div>
+								</div>
+								<div class="medium-6 columns text-right">
+									<div class="ms-portal-button close-line-summary">Save</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<div class="row">
+			<div class="large-12 columns">
+				<footer>
+					<div class="aux-footer">
+						<nav class="legal-menu">
+							<ul class="menu">
+								<li><a href="#">Privacy</a></li>
+								<li><a href="#">Terms of Use</a></li>
+								<li><a href="#" class="last">Accessibility</a></li>
+							</ul>
+						</nav>
+						<div class="copyright">&copy; 1996-2014 Morneau Shepell Ltd</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/foundation/js/foundation.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/ms.js"></script>
+</body>
+</html>
