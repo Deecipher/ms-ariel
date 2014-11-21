@@ -94,13 +94,102 @@
 				<div class="breadcrumb">
 					<a href="/dashboard">Breadcrumbs</a> &raquo; <a href="#">Sub Page</a> &raquo; Current Page
 				</div>
-				<h1>Kitchen Sink, This Is An H1</h1>
+				<h1>Kitchen Sink</h1>
 			</div>
 		</header>
 
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>Typography:</h1>
+				<hr>
+				<h1>This is an H1 Heading</h1>
+				<h2>This is an H2 Heading</h2>
+				<h3>This is an H3 Heading</h3>
+				<h4>This is an H4 Heading</h4>
+				<h5>This is an H5 Heading</h5>
+				<h6>This is an H6 Heading</h6>
+				<p class="lead">This is a lead paragraph. It looks a little more prominent than regular paragraphs. Add the "lead" class to a paragraph to use it. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+				<p>This is a standard paragraph. Regular text goes here. Blanditiis voluptate ut ratione, vel et dolores doloremque rem. Architecto temporibus officia rem quos aliquam quis earum quaerat non dicta eaque reiciendis at, nostrum minus, autem doloremque unde. Quae excepturi sint doloribus assumenda blanditiis alias.</p>
+				<a href="">This is a link</a>
+				<br>
+				<br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="widget-container large-12 columns">
+				<div class="widget">
+					<h2>Widget Typography: This is an H2 Heading</h2>
+					<div class="content news">
+						<div class="row">
+							<div class="medium-12 columns">
+								<h3>This is an H3</h3>
+								<h4>This is an H4 Heading</h4>
+								<h5>This is an H5 Heading</h5>
+								<p class="lead">This is a lead paragraph. It looks a little more prominent than regular paragraphs. Add the "lead" class to a paragraph to use it. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+								<p>This is a standard paragraph. Regular text goes here. Blanditiis voluptate ut ratione, vel et dolores doloremque rem. Architecto temporibus officia rem quos aliquam quis earum quaerat non dicta eaque reiciendis at, nostrum minus, autem doloremque unde. Quae excepturi sint doloribus assumenda blanditiis alias.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="widget-container large-12 columns">
+				<div class="widget slider">
+					<h2>Slider Widget Typography: This is an H2 Heading</h2>
+					<div class="content news">
+						<div class="row">
+							<div class="medium-12 columns">
+								<h3>This is an H3</h3>
+								<h4>This is an H4 Heading</h4>
+								<h5>This is an H5 Heading</h5>
+								<p class="lead">This is a lead paragraph. It looks a little more prominent than regular paragraphs. Add the "lead" class to a paragraph to use it. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+								<p>This is a standard paragraph. Regular text goes here. Blanditiis voluptate ut ratione, vel et dolores doloremque rem. Architecto temporibus officia rem quos aliquam quis earum quaerat non dicta eaque reiciendis at, nostrum minus, autem doloremque unde. Quae excepturi sint doloribus assumenda blanditiis alias.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>Buttons and Inputs:</h1>
+				<hr>
+				<a href="#" class="ms-portal-button">Portal Button</a>
+				<div class="pager">
+					<div class="row">
+						<div class="small-12 columns">
+							<p>Pager:</p>						
+							<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
+							<span>1 of 2</span>
+							<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
+						</div>
+					</div>
+				</div>
+				<br>
+				<br>
+				<div class="row collapse">
+					<div class="small-4 columns">
+						<input type="text" placeholder="Search">
+					</div>
+					<div class="small-2 end columns">
+						<a href="#">
+							<img src="http://placehold.it/38">
+						</a>
+					</div>
+				</div>
+				<br>
+				<br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>Example Widgets:</h1>
+				<hr>
+			</div>
+		</div>
 		<!-- Widget Container -->
 		<div class="row">
-
 			<div id="dashboard" class="js-masonry" data-masonry-options='{ "itemSelector": ".widget-container", "columnWidth": ".large-4" }'>
 				<!-- Widgets -->
 				<div class="widget-container large-8 columns">
@@ -679,11 +768,12 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div><!-- End Widget Container -->
 
 		<div class="row">
 			<div class="large-12 columns">
-				<h1>Data Collection Dialog</h1>
+				<h1>Data Collection Dialog:</h1>
+				<hr>
 			</div>
 		</div>
 
@@ -880,7 +970,43 @@
 			</div>
 		</div>
 
-	</div>
+	</div> <!-- End Page Container -->
+
+	<script>
+    d3.csv("data.csv" + '?' + Math.floor(Math.random() * 100000	), function(data) {
+		// the columns you'd like to display
+		var columns = ["SIN", "Last name", "First name", "Source"];
+
+		var table = d3.select("#inputdata-table").append("table"),
+		thead = table.append("thead"),
+		tbody = table.append("tbody");
+
+		// append the header row
+		thead.append("tr")
+		.selectAll("th")
+		.data(columns)
+		.enter()
+		.append("th")
+		.text(function(column) { return column; });
+
+		// create a row for each object in the data
+		var rows = tbody.selectAll("tr")
+		.data(data)
+		.enter()
+		.append("tr");
+
+		// create a cell in each row for each column
+		var cells = rows.selectAll("td")
+		.data(function(row) {
+			return columns.map(function(column) {
+				return {column: column, value: row[column]};
+			});
+		})
+		.enter()
+		.append("td")
+		.text(function(d) { return d.value; });
+	});
+    </script>
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/foundation/js/foundation.min.js"></script>
