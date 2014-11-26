@@ -1,0 +1,429 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Data Collection - Input Data | Arial DB | MS</title>
+	<link rel="stylesheet" href="css/app.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet' type='text/css'>
+	<script src="bower_components/modernizr/modernizr.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<!-- <script src="/js/masonry.pkgd.min.js"></script> -->
+</head>
+<body>
+
+	<div id="nav">
+		<div id="nav-bg"></div>
+		<ul>
+			<li>
+				<a id="opn-cls">
+					<div class="icon menu"></div>
+				</a>
+			</li>
+			<li>
+				<a href="dashboard">
+					<div class="icon dashboard"></div>
+					<span class="title">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<div>
+					<div class="icon members"></div>
+					<span class="title">Members</span>
+					<div class="subnav">
+						<div class="indicator">
+							<img src="/css/img/ariel_menu-active-indicator-l.svg" alt="">
+						</div>
+						<ul>
+							<li><a href="#">Test</a></li>
+							<li><a href="#">Test</a></li>
+							<li><a href="#">Test</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div>
+					<div class="icon messages"></div>
+					<span class="title">My Secure Messages</span>
+					<div class="subnav">
+						<div class="indicator">
+							<img src="/css/img/ariel_menu-active-indicator-l.svg" alt="">
+						</div>
+						<ul>
+							<li><a href="#">Test</a></li>
+							<li><a href="#">Test</a></li>
+							<li><a href="#">Test</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="active">
+					<div class="icon process active"></div>
+					<span class="title">Process Management</span>
+					<div class="subnav">
+						<div class="indicator">
+							<img src="/css/img/ariel_menu-active-indicator-l.svg" alt="">
+						</div>
+						<ul>
+							<li><a href="data-collection-id">Data Collection</a></li>
+							<li><a href="">Member Processes</a></li>
+							<li><a href="">Remittances</a></li>
+							<li><a href="">Education Workshop</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<div class="icon reports"></div>
+					<span class="title">Reports &amp; Documents</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="icon admin"></div>
+					<span class="title">Administration</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="icon help"></div>
+					<span class="title">Help</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="page-container">
+
+		<!-- HEADER -->
+		<header class="row">
+			<div class="large-4 columns">
+				<!-- Client Logo -->
+				<img id="logo" src="/css/img/logo.gif" alt="Client Logo">
+			</div>
+			<div class="large-8 columns">
+				<!-- Secondary Nav Items -->
+				<div id="nav-sec">
+					<div class="search">
+						<div class="search-input"><input type="text" placeholder="Search"></div>
+						<a href="#" class="search-submit"><img src="/css/img/ariel_second-nav-search.svg" alt="Search"></a>
+					</div>
+					<div class="lang">
+						<a href="#" class="active">EN</a> <a href="#">FR</a>
+					</div>
+					<div class="account">
+						company name &nbsp;|&nbsp; name.lastname &nbsp;&nbsp;<img src="/css/img/ariel_second-nav-user.svg" alt="User">
+					</div>
+				</div>
+			</div>
+			<div class="large-12 columns">
+				<!-- Page Title -->
+				<div class="breadcrumb">
+					<a href="/dashboard">Dashboard</a> &raquo; <a href="#">Process management</a> &raquo; Data Collection
+				</div>
+				<h1>Data Collection - Input Data</h1>
+			</div>
+		</header>
+
+		<!-- Content Container -->
+		<div class="row">
+			<div class="large-8 columns main">
+				<div class="row process-state">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					viewBox="0 0 751.5 51" enable-background="new 0 0 751.5 51" xml:space="preserve">
+						<polygon fill="#00ACCD" points="-4.8,0 246.3,0 258.8,25.5 246.3,51 -4.8,51 "/>
+						<polygon fill="none" stroke="#00ACCD" stroke-miterlimit="10" points="254.1,0.5 503.8,0.5 516.1,25.5 503.8,50.5 254.1,50.5 
+						266.4,25.5 "/>
+						<polygon fill="none" stroke="#00ACCD" stroke-miterlimit="10" points="511.4,0.5 751,0.5 751,25.5 751,50.5 511.4,50.5 523.7,25.5 
+						"/>
+					</svg>
+					<div class="large-4 columns">
+						<div class="text-center state current">1. Input Data</div>
+					</div>
+					<div class="large-4 columns">
+						<div class="text-center state">2. Review Data</div>
+					</div>
+					<div class="large-4 columns">
+						<div class="text-center state">3. Submit</div>
+					</div>
+				</div>
+				<dl class="tabs" data-tab>
+					<dd class="active"><a href="#panel1">File View</a></dd>
+					<dd><a href="#panel2">Data View</a></dd>
+					<div id="manual-entry">
+						<div class="plus">+</div>
+						<div class="title">Manual Entry</div>
+					</div>
+				</dl>
+				<div class="tabs-content">
+					<div class="content active" id="panel1">
+						<p>Select the files that contain the data you want to add into the data collection.</p>
+						<div id="file-upload">
+							<div class="cta-text"><b>DROP</b> files here</div>
+							<p>or</p>
+							<div id="add-file" class="ms-portal-button">Select files from your computer</div>
+							<div class="fine-print">Accepted files: CSV, TXT, DTB. Maximum file size 35MB. Having problem uploading a file? Check the <a href="#">Help</a> page.</div>
+						</div>
+						<div id="csv-template">
+							<a href="#">Download a template file with data (.CSV)</a>
+						</div>
+						<div id="upload-verification">
+							<img src="/css/img/ariel_documents-icon-file.svg" alt="">
+							<div class="upload">
+								<a href="#">DIV123-Dept1-APR2014.csv</a> imported (67 records)
+								<div class="message">
+									File succefully imported. No errors found.
+								</div>
+								<div class="controls">
+									<a class="remove" href="#">Remove</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content" id="panel2">
+						<div id="inputdata-table"></div>
+						<div class="row">
+							<div class="small-12 columns text-center">
+								<div class="pager">
+									<div class="row">
+										<div class="small-12 columns">		
+											<a class="prev" href="#"></a>
+											<span>1 of 2</span>
+											<a class="next" href="#"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="medium-6 columns">
+						<a href="dashboard" class="ms-portal-button-noarrow">Cancel</a>
+					</div>
+					<div class="medium-6 columns text-right">
+						<a href="data-collection-rd" class="ms-portal-button-continue">Continue</a>
+					</div>
+				</div>
+			</div>
+			<div class="large-4 columns secondary">
+				<div id="total-summary">
+					<div class="widget">
+						<h2>Data collection summary</h2>
+						<div class="content data-input total-summary">
+							<ul class="key1">
+								<li>Plan:</li>
+								<li>Name:</li>
+								<li>Configuration:</li>
+								<li>Start date:</li>
+								<li>End date:</li>
+								<li>Effective date:</li>
+								<li>Status:</li>
+							</ul>
+							<ul class="data1">
+								<li>PSPP</li>
+								<li>Division 123 - April 2014</li>
+								<li>Single member creation</li>
+								<li>2014-04-01</li>
+								<li>2014-04-30</li>
+								<li>&nbsp;</li>
+								<li>On creation</li>
+							</ul>
+							<div class="subtitle">Data entry summary</div>
+							<ul class="key2">
+								<li>DIV123-Dept1-APR2014.csv</li>
+								<li class="total">Total records:</li>
+							</ul>
+							<ul class="data2">
+								<li>67 records</li>
+								<li class="total">67</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="line-summary">
+					<div class="widget">
+						<h2>1234567890 - Doe, John</h2>
+						<div class="content data-summary line-summary accordions">
+							<dl data-accordion="" class="accordion">
+								<dd class="accordion-navigation">
+									<a href="#panel1b" class="tab-panel">Basic member info</a>
+									<div class="content" id="panel1b">
+										<ul class="key1">
+											<li><b>Start date</b></li>
+											<li><b>End date</b></li>
+											<li><b>Earned salary:</b> $/y (00000.00)</li>
+											<li><b>Contribution:</b> $/y (00000.00)</li>
+											<li><b>Salary rate:</b>  $/y (00000.00)</li>
+											<li><b>Service:</b> (days)</li>
+										</ul>
+										<ul class="data1">
+											<li>00/00/0000</li>
+											<li>00/00/0000</li>
+											<li>00000.00</li>
+											<li>00000.00</li>
+											<li>00000.00</li>
+											<li>000</li>
+										</ul>
+									</div>
+								</dd>
+								<dd class="accordion-navigation active">
+									<a href="#panel2b" class="tab-panel">Payroll information</a>
+									<div class="content active" id="panel2b">
+										<ul class="key1">
+											<li><b>Start date</b></li>
+											<li><b>End date</b></li>
+											<li><b>Earned salary:</b> $/y (00000.00)</li>
+											<li><b>Contribution:</b> $/y (00000.00)</li>
+											<li><b>Salary rate:</b>  $/y (00000.00)</li>
+											<li><b>Service:</b> (days)</li>
+										</ul>
+										<ul class="data1">
+											<li>00/00/0000</li>
+											<li>00/00/0000</li>
+											<li>00000.00</li>
+											<li>00000.00</li>
+											<li>00000.00</li>
+											<li>000</li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+							<div class="row">
+								<div class="medium-6 columns">
+									<div class="close-line-summary cancel">Close</div>
+								</div>
+								<div class="medium-6 columns text-right">
+									<!-- <div class="ms-portal-button close-line-summary">Save</div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="data-entry">
+					<div class="widget">
+						<h2>New Manual Entry</h2>
+						<div class="content data-summary line-summary accordions">
+							<dl data-accordion="" class="accordion">
+								<dd class="accordion-navigation active">
+									<a href="#panel1b" class="tab-panel">Basic member info</a>
+									<div class="content active" id="panel1b">
+										<ul class="key1">
+											<li><b>Start date</b></li>
+											<li><b>End date</b></li>
+											<li><b>Earned salary:</b> $/y (00000.00)</li>
+											<li><b>Contribution:</b> $/y (00000.00)</li>
+											<li><b>Salary rate:</b>  $/y (00000.00)</li>
+											<li><b>Service:</b> (days)</li>
+										</ul>
+										<ul class="data1">
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+										</ul>
+									</div>
+								</dd>
+								<dd class="accordion-navigation">
+									<a href="#panel2b" class="tab-panel">Payroll information</a>
+									<div class="content" id="panel2b">
+										<ul class="key1">
+											<li><b>Start date</b></li>
+											<li><b>End date</b></li>
+											<li><b>Earned salary:</b> $/y (00000.00)</li>
+											<li><b>Contribution:</b> $/y (00000.00)</li>
+											<li><b>Salary rate:</b>  $/y (00000.00)</li>
+											<li><b>Service:</b> (days)</li>
+										</ul>
+										<ul class="data1">
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+											<li><input type="text"></li>
+										</ul>
+									</div>
+								</dd>
+							</dl>
+							<div class="row">
+								<div class="medium-6 columns">
+									<div class="close-line-summary cancel">Cancel</div>
+								</div>
+								<div class="medium-6 columns text-right">
+									<div class="ms-portal-button close-line-summary">Save</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<div class="row">
+			<div class="large-12 columns">
+				<footer>
+					<div class="aux-footer">
+						<nav class="legal-menu">
+							<ul class="menu">
+								<li><a href="#">Privacy</a></li>
+								<li><a href="#">Terms of Use</a></li>
+								<li><a href="#" class="last">Accessibility</a></li>
+							</ul>
+						</nav>
+						<div class="copyright">&copy; 1996-2014 Morneau Shepell Ltd</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+	</div><!-- END #page-container -->
+
+	<script>
+    d3.csv("data.csv" + '?' + Math.floor(Math.random() * 100000	), function(data) {
+		// the columns you'd like to display
+		var columns = ["SIN", "Last name", "First name", "Source"];
+
+		var table = d3.select("#inputdata-table").append("table"),
+		thead = table.append("thead"),
+		tbody = table.append("tbody");
+
+		// append the header row
+		thead.append("tr")
+		.selectAll("th")
+		.data(columns)
+		.enter()
+		.append("th")
+		.text(function(column) { return column; });
+
+		// create a row for each object in the data
+		var rows = tbody.selectAll("tr")
+		.data(data)
+		.enter()
+		.append("tr");
+
+		// create a cell in each row for each column
+		var cells = rows.selectAll("td")
+		.data(function(row) {
+			return columns.map(function(column) {
+				return {column: column, value: row[column]};
+			});
+		})
+		.enter()
+		.append("td")
+		.text(function(d) { return d.value; });
+	});
+    </script>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ms.js"></script>
+</body>
+</html>

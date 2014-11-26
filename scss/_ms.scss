@@ -194,10 +194,10 @@ hr {
 
 #nav {
 	width: 10%;
-	max-width: 85px;
+	max-width: 80px;
 	position: relative;
-	background: $blue-dark;
-	overflow: hidden;
+	// background: $blue-dark;
+	// overflow: hidden;
 	float: left;
 	text-align: left;
 	&.open {
@@ -208,20 +208,35 @@ hr {
 			max-width: 270px;
 		}
 		ul {
-			width: 80%;
+			width: 96%;
 			list-style: none;
 			margin: 1.75rem 1.25rem;
 			li {
-				a {
+				a, div {
 					text-decoration: none;
+					position: relative;
 					.title {
 						margin-left: 1rem;
-						display: inline;
+						display: inline-block;
 						font-size: .875rem;
 						color: $white;
 						text-decoration: none;
+						vertical-align: calc(60%);
 						&:hover {
-							color: darken($white, 13%);
+							color: $blue;
+						}
+					}
+					&.active {
+						.title {
+							color: $blue;
+						}
+					}
+					.subnav {
+						display: none;
+					}
+					&:hover {
+						.subnav {
+							display: block;
 						}
 					}
 				}
@@ -233,21 +248,150 @@ hr {
 		height: 100%;
 		position: fixed;
 		width: 10%;
-		max-width: 85px;
+		max-width: 80px;
 		z-index: -1;
 	}
 	ul {
-		width: 66%;
+		width: 88%;
 		list-style: none;
 		margin: 1.75rem 1.25rem;
 		li {
-			margin-bottom: 1rem;
-			a {
+			margin-bottom: 2rem;
+			a, div {
 				text-decoration: none;
+				display: block;
+				width: 100%;
+				position: relative;
+				&.active {
+					background: url('img/ariel_menu-active-indicator.svg') no-repeat right 40% / 16px 16px;
+				}
+				.subnav {
+					display: none;
+				}
+				&:hover {
+					.subnav {
+						display: block;
+						position: absolute;
+						z-index: 1000;
+						width: 15rem;
+						left: 85%;
+						top: -0.5rem;
+						font-size: 1rem;
+						color: $white;
+						background: darken($blue-dark, 9%);
+						.indicator {
+							position: absolute;
+							z-index: 1001;
+							left: -7px;
+							top: 11px;
+							width: 8px;
+							height: 8px;
+						}
+						ul {
+							margin: 0;
+							width: 100%;
+							padding: 0.75rem 1.25rem;
+							li {
+								margin-bottom: 0.5rem;
+								a {
+									color: $white;
+								}
+								&:hover {
+									color: $blue;
+									a {
+										color: $blue;
+									}
+								}
+								&:last-child {
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+				}
+				.icon {
+					width: 35px;
+					height: 35px;
+					display: inline-block;
+					&.menu {
+						background: url('img/ariel_icon-menu.svg') no-repeat center;
+					}
+					&.dashboard {
+						background: url('img/ariel_icon-dashboard.svg') no-repeat center;
+						&:hover, &.active {
+							background: url('img/ariel_icon-dashboard-h.svg') no-repeat center;
+						}
+					}
+					&.members {
+						background: url('img/ariel_icon-members.svg') no-repeat center;
+						&:hover, &.active {
+							background: url('img/ariel_icon-members-h.svg') no-repeat center;
+						}
+					}
+					&.messages {
+						background: url('img/ariel_icon-messages.svg') no-repeat center;
+						&:hover, &.active {
+							background: url('img/ariel_icon-messages-h.svg') no-repeat center;
+						}
+					}
+					&.process {
+						background: url('img/ariel_icon-process.svg') no-repeat center;
+						&:hover, &.active {
+							background: url('img/ariel_icon-process-h.svg') no-repeat center;
+						}
+					}
+					&.reports {
+						background: url('img/ariel_icon-reports.svg') no-repeat center;
+						&:hover, &.active {
+							background: url('img/ariel_icon-reports-h.svg') no-repeat center;
+						}
+					}
+					&.admin {
+						background: url('img/ariel_icon-admin.svg') no-repeat center;
+						&:hover, &.active {
+							background: url('img/ariel_icon-admin-h.svg') no-repeat center;
+						}
+					}
+					&.help {
+						background: url('img/ariel_icon-help.svg') no-repeat center;
+						&:hover, &.active {
+							background: url('img/ariel_icon-help-h.svg') no-repeat center;
+						}
+					}
+				}
 				.title {
 					margin-left: 1rem;
 					display: none;
 					text-decoration: none;
+					color: $blue;
+				}
+				&:hover {
+					.icon {
+						&.dashboard {
+							background: url('img/ariel_icon-dashboard-h.svg') no-repeat center;
+						}
+						&.members {
+							background: url('img/ariel_icon-members-h.svg') no-repeat center;
+						}
+						&.messages {
+							background: url('img/ariel_icon-messages-h.svg') no-repeat center;
+						}
+						&.process {
+							background: url('img/ariel_icon-process-h.svg') no-repeat center;
+						}
+						&.reports {
+							background: url('img/ariel_icon-reports-h.svg') no-repeat center;
+						}
+						&.admin {
+							background: url('img/ariel_icon-admin-h.svg') no-repeat center;
+						}
+						&.help {
+							background: url('img/ariel_icon-help-h.svg') no-repeat center;
+						}
+					}
+					.title {
+						color: $blue;
+					}
 				}
 			}
 		}
@@ -259,9 +403,11 @@ hr {
 header {
 	#logo {
 		margin-bottom: 2rem;
+		width: 270px;
 	}
 	#nav-sec {
 		text-align: right;
+		margin-top: 2rem;
 		.search {
 			font-family: 'Open Sans';
 			display: inline;
@@ -279,6 +425,11 @@ header {
 				display: inline;
 				top: -1px;
 				position: relative;
+				img {
+					height: 20px;
+					width: 20px;
+					margin-left: 0.25rem;
+				}
 			}
 		}
 		.lang {
@@ -302,6 +453,10 @@ header {
 			display: inline;
 			font-size: 0.875rem;
 			margin-left: 1.25rem;
+			img {
+				height: 21px;
+				width: 21px;
+			}
 		}
 	}
 	.breadcrumb {
@@ -503,6 +658,31 @@ footer {
 		background: $leftarrow no-repeat scroll left center darken($grey-med, 8%);
 	}
 }
+.ms-portal-button-cancel {
+	@include button;
+	padding: 0.7rem 1.25rem 0.9rem 1rem;
+	background: $white;
+	border: 1px solid $red;
+	color: $red;
+	&:hover {
+		background: lighten($red, 47%);
+		border: 1px solid darken($red, 8%);
+		color: darken($red, 8%);
+		&:focus {
+			background: $white;
+			border: 1px solid $red;
+			color: $red;
+		}
+	}
+	&:focus {
+		background: $white;
+		border: 1px solid $red;
+		color: $red;
+	}
+	&.small {
+		padding: 0.3rem 1.125rem 0.45rem 1rem;
+	}
+}
 
 // Pagination
 
@@ -576,6 +756,48 @@ table {
 			}
 			th {
 			}
+			&.warning {
+				.color-block {
+					width: 11px;
+					height: 11px;
+					margin-right: 0.75rem;
+					display: inline-block;
+					background: $yellow;
+				}
+				&.highlight {
+					background: $yellow;
+					td {
+						color: $body;
+					}
+					&:hover {
+						background: $yellow;
+					}
+				}
+				&:hover {
+					background: lighten($yellow, 47%);
+				}
+			}
+			&.error {
+				.color-block {
+					width: 11px;
+					height: 11px;
+					margin-right: 0.75rem;
+					display: inline-block;
+					background: $red;
+				}
+				&.highlight {
+					background: $red;
+					td {
+						color: $white;
+					}
+					&:hover {
+						background: $red;
+					}
+				}
+				&:hover {
+					background: lighten($red, 47%);
+				}
+			}
 		}
 	}
 }
@@ -591,14 +813,27 @@ table {
 	border: 1px solid $grey-light;
 	position: relative;
 	margin-bottom: 1.875rem;
+	background: $white;
 	.widget-control {
-		background: url('img/widget-control.svg') no-repeat center center;
+		background: url('img/ariel_widget-icon-move.svg') no-repeat center center;
 		position: absolute;
 		top: 0;
 		right: 0;
 		width: 1.25rem;
 		height: 1.25rem;
-		margin: .75rem 1rem;
+		margin: 0.85rem 3rem;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.widget-expand {
+		background: url('img/ariel_widget-icon-maximize.svg') no-repeat center center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 1.25rem;
+		height: 1.25rem;
+		margin: 0.8rem 1rem;
 		&:hover {
 			cursor: pointer;
 		}
@@ -675,10 +910,28 @@ table {
 		}
 	}
 	.pager {
-		// padding: 0 1.125rem;
 		margin-bottom: 1.25rem;
 		font-size: 1rem;
 		color: $grey-dark;
+		span {
+			display: inline-block;
+			margin: 0 0.5rem;
+		}
+		.prev {
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			background:transparent url('img/ariel_table-page-left-inactive.svg') left top no-repeat;
+		}
+		.next {
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			background: transparent url('img/ariel_table-page-right-active.svg') left top no-repeat;
+			&:hover {
+				background: transparent url('img/ariel_table-page-right-hover.svg') left top no-repeat;
+			}
+		}
 	}
 }
 
@@ -710,6 +963,25 @@ table {
 			top: 1.5rem;
 			right: 1.275rem;
 			color: $grey-dark;
+			span {
+				display: inline-block;
+				margin: 0 0.5rem;
+			}
+			.prev {
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				background:transparent url('img/ariel_table-page-left-inactive.svg') left top no-repeat;
+			}
+			.next {
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				background: transparent url('img/ariel_table-page-right-active.svg') left top no-repeat;
+				&:hover {
+					background: transparent url('img/ariel_table-page-right-hover.svg') left top no-repeat;
+				}
+			}
 		}
 		.content.news {
 			img {
@@ -782,12 +1054,12 @@ table {
 			margin-bottom: 1.25rem;
 			.accordion-navigation {
 				a {
-					background: url('http://placehold.it/16') no-repeat right 1rem center $grey-light;
+					background: url('img/ariel_accordion-open.svg') no-repeat right 1rem center / 12px $grey-light;
 					font-size: 1.125rem;
 					color: $blue-dark;
 					text-decoration: none;
 					&:hover {
-						background: url('http://placehold.it/16') no-repeat right 1rem center darken($grey-light, 6%);
+						background: url('img/ariel_accordion-open.svg') no-repeat right 1rem center / 12px darken($grey-light, 6%);
 					}
 					&.tab-panel {
 						padding: 0.5rem 1rem;
@@ -795,9 +1067,9 @@ table {
 				}
 				&.active {
 					a {
-						background: url('http://placehold.it/16') no-repeat right 1rem center $grey-light;
+						background: url('img/ariel_accordion-close.svg') no-repeat right 1rem center / 12px $grey-light;
 						&:hover {
-							background: url('http://placehold.it/16') no-repeat right 1rem center darken($grey-light, 6%);
+							background: url('img/ariel_accordion-close.svg') no-repeat right 1rem center / 12px darken($grey-light, 6%);
 						}
 					}
 				}
@@ -815,6 +1087,11 @@ table {
 									height: 33px;
 									margin: 0.3rem 1rem 0 0;
 									float: left;
+									&.icon {
+										height: 21px;
+										width: 24px;
+										margin: 0.2rem 1rem 1rem 0;
+									}
 								}
 								.title {
 									font-size: .875rem;
@@ -890,6 +1167,25 @@ table {
 		.pager {
 			border-top: 1px solid $grey-light;
 			padding-top: 1rem;
+			span {
+				display: inline-block;
+				margin: 0 0.5rem;
+			}
+			.prev {
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				background:transparent url('img/ariel_table-page-left-inactive.svg') left top no-repeat;
+			}
+			.next {
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				background: transparent url('img/ariel_table-page-right-active.svg') left top no-repeat;
+				&:hover {
+					background: transparent url('img/ariel_table-page-right-hover.svg') left top no-repeat;
+				}
+			}
 		}
 	}
 }
@@ -912,6 +1208,11 @@ table {
 					}
 				}
 			}
+		}
+		.search-icon {
+			width: 30px;
+			height: 30px;
+			margin-top: 0.25rem;
 		}
 	}
 }
@@ -940,9 +1241,79 @@ table {
 			}
 		}
 	}
+	#processing {
+		margin: 3rem 0 0;
+		svg {
+			margin-bottom: 2rem;
+			width: 100px;
+			height: 100px;
+			overflow: visible;
+		}
+		p {
+			font-size: 0.875rem;
+		}
+		a {
+			margin-top: 3rem;
+		}
+	}
+	#tab-content {
+		// Display none by default on review page
+		display: none;
+		#overview {
+			font-size: 0.875rem;
+			margin: 1rem 0 2rem;
+			.total {
+				float: left;
+				margin-right: 1.5rem;
+				margin-top: 0.6rem;
+			}
+			.warn {
+				float: left;
+				margin-right: 1.5rem;
+				margin-top: 0.6rem;
+				color: $body;
+				.color-block {
+					width: 11px;
+					height: 11px;
+					margin-right: 0.75rem;
+					display: inline-block;
+					background: $yellow;
+				}
+			}
+			.errors {
+				float: left;
+				margin-right: 0;
+				margin-top: 0.6rem;
+				color: $body;
+				.color-block {
+					width: 11px;
+					height: 11px;
+					margin-right: 0.75rem;
+					display: inline-block;
+					background: $red;
+				}
+			}
+			.search {
+				// border: 1px solid $grey-light;
+				input {
+					margin-bottom: 0;
+				}
+				.postfix {
+					background: $blue;
+					border: none;
+					svg {
+						height: 21px;
+						width: 21px;
+						margin-top: 0.5rem;
+					}
+				}
+			}			
+		}
+	}
 	.tabs {
 		position: relative;
 		dd {
+			margin-right: 2px;
 			a {
 				background: $grey-light;
 				text-decoration: none;
@@ -995,6 +1366,13 @@ table {
 					color: $white;
 				}
 			}
+			&.active {
+				background: $blue;
+				.title {
+					background: $blue;
+					color: $white;
+				}
+			}
 		}
 	}
 	.tabs-content {
@@ -1041,6 +1419,8 @@ table {
 			margin-top: 2rem;
 			img {
 				float: left;
+				height: 25px;
+				width: 25px;
 			}
 			.upload {
 				margin-left: 3rem;
@@ -1068,6 +1448,25 @@ table {
 	}
 	.pager {
 		margin-bottom: 1.5rem;
+		span {
+			display: inline-block;
+			margin: 0 0.5rem;
+		}
+		.prev {
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			background:transparent url('img/ariel_table-page-left-inactive.svg') left top no-repeat;
+		}
+		.next {
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			background: transparent url('img/ariel_table-page-right-active.svg') left top no-repeat;
+			&:hover {
+				background: transparent url('img/ariel_table-page-right-hover.svg') left top no-repeat;
+			}
+		}
 	}
 }
 
@@ -1078,7 +1477,264 @@ table {
 	#line-summary {
 		display: none;
 	}
+	#data-entry {
+		display: none;
+	}
+	&.review {
+		#processing-summary {
+			// Showing by default
+		}
+		#total-summary {
+			display: none;
+		}
+	}
+	#error-list-warning, 
+	#error-list-error, 
+	#impacted-list-warning, 
+	#impacted-list-error, 
+	#view-all-edit {
+		display: none;
+	}
 }
+
+// Data SUMMARY
+
+.widget {
+	&.warning {
+		h2 {
+			color: $body;
+			background: $yellow;
+		}
+		.content.data-summary {
+			&.total-summary, &.line-summary {
+				.desc {
+					border: 1px solid $yellow;
+					padding: 0.75rem 1rem;
+					margin-bottom: 1.25rem;
+				}
+			}
+		}
+	}
+	&.error {
+		h2 {
+			color: $white;
+			background: $red;
+		}
+		.content.data-summary {
+			&.total-summary, &.line-summary {
+				.desc {
+					border: 1px solid $red;
+					padding: 0.75rem 1rem;
+					margin-bottom: 1.25rem;
+				}
+			}
+		}
+	}
+	.content.data-summary {
+		&.total-summary {
+			.key1 {
+				list-style: none;
+				color: $blue-dark;
+				margin: 0;
+				float: left;
+				li {
+					margin-bottom: .4rem;
+				}
+			}
+			.data1 {
+				list-style: none;
+				color: $body;
+				margin: 0 0 2rem 8rem;
+				li {
+					margin-bottom: .4rem;
+				}
+			}
+			.subtitle {
+				font-weight: 700;
+				color: $blue;
+				margin-bottom: 0.55rem;
+			}
+			.key2 {
+				list-style: none;
+				color: $blue-dark;
+				margin: 0;
+				float: left;
+				li {
+					margin-bottom: .4rem;
+					&.total {
+						margin-top: 1rem;
+						font-weight: 600;
+					}
+					&.warnings {
+						color: $body;
+						.color-block {
+							width: 11px;
+							height: 11px;
+							margin-right: 0.75rem;
+							display: inline-block;
+							background: $yellow;
+						}
+					}
+					&.errors {
+						color: $body;
+						.color-block {
+							width: 11px;
+							height: 11px;
+							margin-right: 0.75rem;
+							display: inline-block;
+							background: $red;
+						}
+					}
+				}
+			}
+			.data2 {
+				list-style: none;
+				color: $body;
+				margin: 0 0 1.25rem 13rem;
+				li {
+					margin-bottom: .4rem;
+					&.total {
+						margin-top: 1rem;
+						font-weight: 600;
+					}
+				}
+			}
+			.action, .edit-button {
+				@include button;
+				width: 100%;
+				padding: 0.7rem 2.5rem 0.9rem 1rem;
+				margin-bottom: 0.125rem;
+				background: url('img/ariel_action-arrow.svg') no-repeat scroll right 1rem center / 12px $white;
+				border: 1px solid $grey-light;
+				text-align: left;
+				color: $body;
+				-webkit-transition: none;
+				-o-transition: none;
+				transition: none;
+				&:hover {
+					background: url('img/ariel_action-arrow-h.svg') no-repeat scroll right 1rem center / 12px $blue;
+					border: 1px solid $grey-light;
+					color: $white;
+					&:focus {
+						background: url('img/ariel_action-arrow-h.svg') no-repeat scroll right 1rem center / 12px $blue;
+						border: 1px solid $grey-light;
+						color: $white;
+					}
+				}
+				&:focus {
+					background: url('img/ariel_action-arrow.svg') no-repeat scroll right 1rem center / 12px $white;
+					border: 1px solid $grey-light;
+					color: $body;
+				}
+				&:last-child {
+					margin-bottom: 1.25rem;
+				}
+			}
+			.cancel {
+				font-size: 1rem;
+				color: $blue-dark;
+				text-decoration: none;
+				position: relative;
+				top: .33rem;
+				cursor: pointer;
+				margin-bottom: 1.25rem;
+				display: inline-block;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		&.line-summary {
+			&.accordions {
+				.accordion {
+					.content {
+						.key1 {
+							list-style: none;
+							color: $body;
+							margin: 0;
+							float: left;
+							li {
+								padding: .5rem 0;
+								border-bottom: none;
+								line-height: 1.8rem;
+								&:hover {
+									background: none;
+								}
+							}
+						}
+						.data1 {
+							list-style: none;
+							color: $body;
+							margin: 0.75rem 0 1.25rem 13.5rem;
+							li {
+								padding: .5rem 0;
+								border-bottom: none;
+								line-height: 1.8rem;
+								input {
+									height: 1.8rem;
+									margin-bottom: 0;
+									padding: 0.25rem 0.5rem;
+								}
+								&:hover {
+									background: none;
+								}
+							}
+						}
+					}
+				}
+				.cancel-save-controls {
+					display: none;
+				}
+				.cancel {
+					font-size: 1rem;
+					color: $blue-dark;
+					text-decoration: none;
+					position: relative;
+					top: .33rem;
+					cursor: pointer;
+					margin-bottom: 1.25rem;
+					display: inline-block;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				.action, .edit-button {
+					@include button;
+					width: 100%;
+					padding: 0.7rem 2.5rem 0.9rem 1rem;
+					margin-bottom: 0.125rem;
+					background: url('img/ariel_action-arrow.svg') no-repeat scroll right 1rem center / 12px $white;
+					border: 1px solid $grey-light;
+					text-align: left;
+					color: $body;					
+					-webkit-transition: none;
+					-o-transition: none;
+					transition: none;
+					&:hover {
+						background: url('img/ariel_action-arrow-h.svg') no-repeat scroll right 1rem center / 12px $blue;
+						border: 1px solid $grey-light;
+						color: $white;
+						&:focus {
+							background: url('img/ariel_action-arrow-h.svg') no-repeat scroll right 1rem center / 12px $blue;
+							border: 1px solid $grey-light;
+							color: $white;
+						}
+					}
+					&:focus {
+						background: url('img/ariel_action-arrow.svg') no-repeat scroll right 1rem center / 12px $white;
+						border: 1px solid $grey-light;
+						color: $body;
+					}
+					&:last-child {
+						margin-bottom: 1.25rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Data INPUT
 
 .widget {
 	.content.data-input {
@@ -1168,6 +1824,9 @@ table {
 						}
 					}
 				}
+				.cancel-save-controls {
+					display: none;
+				}
 				.cancel {
 					font-size: 1rem;
 					color: $blue-dark;
@@ -1175,6 +1834,8 @@ table {
 					position: relative;
 					top: .33rem;
 					cursor: pointer;
+					margin-bottom: 1.25rem;
+					display: inline-block;
 					&:hover {
 						text-decoration: underline;
 					}

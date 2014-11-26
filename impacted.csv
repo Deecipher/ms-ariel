@@ -1,0 +1,11 @@
+Severity,Action,SIN,Last name,First name
+Field error,Load person,1234567890,Doe,John
+Critical error,Postpone,1234567890,Doe,John
+Field error,Load person,1234567890,Doe,John
+Critical error,Postpone,1234567890,Doe,John
+Field error,Load person,1234567890,Doe,John
+Field error,Load person,1234567890,Doe,John
+Field error,Load person,1234567890,Doe,John
+Field error,Load person,1234567890,Doe,John
+Critical error,Postpone,1234567890,Doe,John
+Field error,Load person,1234567890,Doe,John

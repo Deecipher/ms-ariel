@@ -1,0 +1,781 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Data Collection - Input Data | Arial DB | MS</title>
+	<link rel="stylesheet" href="css/app.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet' type='text/css'>
+	<script src="bower_components/modernizr/modernizr.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<!-- <script src="/js/masonry.pkgd.min.js"></script> -->
+</head>
+<body>
+
+	<div id="nav">
+		<div id="nav-bg"></div>
+		<ul>
+			<li>
+				<a id="opn-cls">
+					<div class="icon menu"></div>
+				</a>
+			</li>
+			<li>
+				<a href="dashboard">
+					<div class="icon dashboard"></div>
+					<span class="title">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<div>
+					<div class="icon members"></div>
+					<span class="title">Members</span>
+					<div class="subnav">
+						<div class="indicator">
+							<img src="/css/img/ariel_menu-active-indicator-l.svg" alt="">
+						</div>
+						<ul>
+							<li><a href="#">Test</a></li>
+							<li><a href="#">Test</a></li>
+							<li><a href="#">Test</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div>
+					<div class="icon messages"></div>
+					<span class="title">My Secure Messages</span>
+					<div class="subnav">
+						<div class="indicator">
+							<img src="/css/img/ariel_menu-active-indicator-l.svg" alt="">
+						</div>
+						<ul>
+							<li><a href="#">Test</a></li>
+							<li><a href="#">Test</a></li>
+							<li><a href="#">Test</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="active">
+					<div class="icon process active"></div>
+					<span class="title">Process Management</span>
+					<div class="subnav">
+						<div class="indicator">
+							<img src="/css/img/ariel_menu-active-indicator-l.svg" alt="">
+						</div>
+						<ul>
+							<li><a href="data-collection-id">Data Collection</a></li>
+							<li><a href="">Member Processes</a></li>
+							<li><a href="">Remittances</a></li>
+							<li><a href="">Education Workshop</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<div class="icon reports"></div>
+					<span class="title">Reports &amp; Documents</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="icon admin"></div>
+					<span class="title">Administration</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="icon help"></div>
+					<span class="title">Help</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="page-container">
+
+		<!-- HEADER -->
+		<header class="row">
+			<div class="large-4 columns">
+				<!-- Client Logo -->
+				<img id="logo" src="/css/img/logo.gif" alt="Client Logo">
+			</div>
+			<div class="large-8 columns">
+				<!-- Secondary Nav Items -->
+				<div id="nav-sec">
+					<div class="search">
+						<div class="search-input"><input type="text" placeholder="Search"></div>
+						<a href="#" class="search-submit"><img src="/css/img/ariel_second-nav-search.svg" alt="Search"></a>
+					</div>
+					<div class="lang">
+						<a href="#" class="active">EN</a> <a href="#">FR</a>
+					</div>
+					<div class="account">
+						company name &nbsp;|&nbsp; name.lastname &nbsp;&nbsp;<img src="/css/img/ariel_second-nav-user.svg" alt="User">
+					</div>
+				</div>
+			</div>
+			<div class="large-12 columns">
+				<!-- Page Title -->
+				<div class="breadcrumb">
+					<a href="/dashboard">Dashboard</a> &raquo; <a href="#">Process management</a> &raquo; Data Collection
+				</div>
+				<h1>Data Collection - Input Data</h1>
+			</div>
+		</header>
+
+		<!-- Content Container -->
+		<div class="row">
+			<div class="large-8 columns main">
+				<div class="row process-state">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					viewBox="0 0 751.5 51" enable-background="new 0 0 751.5 51" xml:space="preserve">
+						<polygon fill="#00ACCD" points="-4.8,0 246.3,0 258.8,25.5 246.3,51 -4.8,51 "/>
+						<polygon fill="#00ACCD" stroke="#00ACCD" stroke-miterlimit="10" points="254.1,0.5 503.8,0.5 516.1,25.5 503.8,50.5 254.1,50.5 
+						266.4,25.5 "/>
+						<polygon fill="none" stroke="#00ACCD" stroke-miterlimit="10" points="511.4,0.5 751,0.5 751,25.5 751,50.5 511.4,50.5 523.7,25.5 
+						"/>
+					</svg>
+					<div class="large-4 columns">
+						<div class="text-center state current">1. Input Data</div>
+					</div>
+					<div class="large-4 columns">
+						<div class="text-center state current">2. Review Data</div>
+					</div>
+					<div class="large-4 columns">
+						<div class="text-center state">3. Submit</div>
+					</div>
+				</div>
+
+				<!-- Data is being processed -->
+				<div id="processing">
+					<div class="processing-icon text-center">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							viewBox="0 0 94.6 100" style="enable-background:new 0 0 94.6 100;" xml:space="preserve">
+							<style type="text/css">
+							.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+							.st1{fill:#FFFFFF;}
+							.st2{fill:#00ACCD;}
+							.st3{fill:#B3B3B3;}
+							.st4{fill:#006472;}
+							.st5{fill:#E5E5E5;}
+							.st6{fill:#003239;}
+							.st7{fill:#FFCC00;}
+							.st8{fill:#FF3300;}
+							.st9{fill:#F7921E;}
+							.st10{fill:#646464;}
+							</style>
+							<g>
+								<g>
+									<path class="st2" d="M92.1,35c-0.4-1.2-1.6-1.8-2.8-1.4c-1.2,0.4-1.8,1.7-1.4,2.8c5.2,15.6,1.3,32.5-10.2,44
+									c-16.8,16.7-44,16.8-60.8,0c-0.5-0.5-0.8-1-1.2-1.5l15.5,0c1.2,0,2.2-1,2.2-2.2c0-1.2-1-2.2-2.2-2.2l-23.3,0v23.3
+									c0,1.2,1,2.2,2.2,2.2s2.2-1,2.2-2.2V81.8c0.5,0.6,0.9,1.1,1.5,1.7c9.2,9.2,21.4,13.9,33.5,13.9c12.1,0,24.3-4.6,33.5-13.9
+									C93.5,70.8,97.8,52.2,92.1,35z"/>
+									<path class="st2" d="M16.9,19.6c16.8-16.8,44-16.8,60.7,0c0.5,0.5,0.8,1,1.2,1.5l-15.5,0c-1.2,0-2.2,1-2.2,2.2
+									c0,1.2,1,2.2,2.2,2.2l23.3,0V2.2c0-1.2-1-2.2-2.2-2.2c-1.2,0-2.2,1-2.2,2.2v15.9c-0.5-0.6-0.9-1.1-1.5-1.7
+									C62.3-2,32.3-2,13.8,16.5C1.1,29.2-3.2,47.8,2.5,65c0.3,0.9,1.2,1.5,2.1,1.5c0.2,0,0.5,0,0.7-0.1c1.2-0.4,1.8-1.7,1.4-2.8
+									C1.5,48,5.4,31.1,16.9,19.6z"/>
+									<animateTransform
+									attributeName="transform"
+									begin="0s"
+									dur="4s"
+									type="rotate"
+									from="0 47.5 50"
+									to="360 47.5 50"
+									repeatCount="indefinite"
+									/>
+								</g>
+								<g class="doc">
+									<path class="st2" d="M62.3,37.2L62.3,37.2L52.1,26.9c-0.1-0.1-0.3-0.2-0.5-0.2H32.8c-0.4,0-0.8,0.3-0.8,0.8v41.1
+									c0,0.4,0.3,0.8,0.8,0.8h29c0.4,0,0.8-0.3,0.8-0.8V37.7C62.6,37.5,62.5,37.3,62.3,37.2z M52.3,29.3l7.7,7.7h-7.7V29.3z M61,67.7
+									H33.5V28.2h17.2v9.5c0,0.4,0.3,0.8,0.8,0.8H61V67.7z"/>
+									<path class="st2" d="M37.1,44.8c0,0.4,0.3,0.8,0.8,0.8h18.8c0.4,0,0.8-0.3,0.8-0.8c0-0.4-0.3-0.8-0.8-0.8H37.9
+									C37.5,44,37.1,44.4,37.1,44.8z"/>
+									<path class="st2" d="M56.7,49.6H37.9c-0.4,0-0.8,0.3-0.8,0.8c0,0.4,0.3,0.8,0.8,0.8h18.8c0.4,0,0.8-0.3,0.8-0.8
+									C57.4,49.9,57.1,49.6,56.7,49.6z"/>
+									<path class="st2" d="M56.7,55.2H37.9c-0.4,0-0.8,0.3-0.8,0.8c0,0.4,0.3,0.8,0.8,0.8h18.8c0.4,0,0.8-0.3,0.8-0.8
+									C57.4,55.5,57.1,55.2,56.7,55.2z"/>
+									<path class="st2" d="M56.7,60.7H37.9c-0.4,0-0.8,0.3-0.8,0.8c0,0.4,0.3,0.8,0.8,0.8h18.8c0.4,0,0.8-0.3,0.8-0.8
+									C57.4,61,57.1,60.7,56.7,60.7z"/>
+								</g>
+							</g>
+						</svg>
+					</div>
+					<p class="text-center">The data entries submitted are being processed.<br>Estimated time to completion: <b>6 minutes</b></p>
+					<p class="text-center">Please wait or go back to your <a href="dashboard">dashboard</a>, you will be notified in your alerts when the data collection is ready.</p>
+					<a href="data-collection-id" class="ms-portal-button-cancel">Cancel data processing</a>
+				</div>
+				<!-- Tabs - Error Listing View, Impacted Member View, View All Data -->
+				<div id="tab-content">
+					<!-- Overview + Search Blcok -->
+					<div id="overview" class="row">
+						<div class="large-8 columns">
+							<div class="total">Total entries: <b>87</b></div>
+							<div class="warn"><span class="color-block"></span>Warnings: <b>15</b></div>
+							<div class="errors"><span class="color-block"></span>Errors: <b>4</b></div>
+						</div>
+						<div class="large-4 columns">
+							<div class="row collapse search">
+								<div class="small-10 columns">
+									<input type="text" placeholder="Search">
+								</div>
+								<div class="small-2 columns text-center">
+									<a class="botton postfix" href="#">
+										<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve">
+										<path fill="#FFFFFF" d="M14.9,13.1l-3.8-3.8c0.6-0.9,1-2.1,1-3.3C12.1,2.7,9.4,0,6.1,0C2.7,0,0,2.7,0,6.1c0,3.3,2.7,6.1,6.1,6.1
+										c1.2,0,2.3-0.4,3.3-1l3.8,3.8c0.1,0.1,0.3,0.1,0.5,0l1.4-1.4C15,13.4,15,13.2,14.9,13.1z M1.9,6.1c0-2.3,1.9-4.1,4.1-4.1
+										c2.3,0,4.1,1.9,4.1,4.1c0,2.3-1.9,4.1-4.1,4.1C3.8,10.2,1.9,8.3,1.9,6.1z"/>
+									</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<dl class="tabs" data-tab>
+						<dd class="active"><a href="#error-list-panel">Error listing view</a></dd>
+						<dd><a href="#impacted-list-panel">Impacted Member View</a></dd>
+						<dd><a href="#view-all-panel">View all data</a></dd>
+					</dl>
+					<div class="tabs-content">
+						<div class="content active" id="error-list-panel">
+							<div id="error-listing-table"></div>
+						</div>
+						<div class="content" id="impacted-list-panel">
+							<div id="impacted-table"></div>
+							<div class="row">
+								<div class="small-12 columns text-center">
+									<div class="pager">
+										<div class="row">
+											<div class="small-12 columns">		
+												<a class="prev" href="#"></a>
+												<span>1 of 2</span>
+												<a class="next" href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="content" id="view-all-panel">
+							<div id="view-all-table"></div>
+							<div class="row">
+								<div class="small-12 columns text-center">
+									<div class="pager">
+										<div class="row">
+											<div class="small-12 columns">		
+												<a class="prev" href="#"></a>
+												<span>1 of 3</span>
+												<a class="next" href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="medium-6 columns">
+							<a href="data-collection-id" class="ms-portal-button-noarrow">Cancel</a>
+						</div>
+						<div class="medium-6 columns text-right">
+							<a href="#" class="ms-portal-button-continue">Continue</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="large-4 columns secondary review">
+				
+				<!-- Processing / Loading screen -->
+				<div id="processing-summary">
+					<div class="widget">
+						<h2>Processing...</h2>
+						<div class="content data-summary total-summary">
+							<ul class="key1">
+								<li>Plan:</li>
+								<li>Name:</li>
+								<li>Configuration:</li>
+								<li>Start date:</li>
+								<li>End date:</li>
+								<li>Effective date:</li>
+								<li>Status:</li>
+							</ul>
+							<ul class="data1">
+								<li>PSPP</li>
+								<li>Division 123 - April 2014</li>
+								<li>Single member creation</li>
+								<li>2014-04-01</li>
+								<li>2014-04-30</li>
+								<li>&nbsp;</li>
+								<li>On creation</li>
+							</ul>
+							<div class="subtitle">Data entry summary</div>
+							<ul class="key2">
+								<li>DIV123-Dept1-APR2014.csv</li>
+								<li>DIV123-Dept1-APR2014.csv</li>
+								<li>Manual entries</li>
+								<li class="total">Total records:</li>
+								<li class="warnings"><span class="color-block"></span>Warnings:</li>
+								<li class="errors"><span class="color-block"></span>Critical errors:</li>
+							</ul>
+							<ul class="data2">
+								<li>67 records</li>
+								<li>17 records</li>
+								<li>3 records</li>
+								<li class="total">87</li>
+								<li class="warnings">Calculating...</li>
+								<li class="errors">Calculating...</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Default widget showing the summary of all content loaded -->
+				<div id="total-summary">
+					<div class="widget">
+						<h2>Data collection summary</h2>
+						<div class="content data-summary total-summary">
+							<ul class="key1">
+								<li>Plan:</li>
+								<li>Name:</li>
+								<li>Configuration:</li>
+								<li>Start date:</li>
+								<li>End date:</li>
+								<li>Effective date:</li>
+								<li>Status:</li>
+							</ul>
+							<ul class="data1">
+								<li>PSPP</li>
+								<li>Division 123 - April 2014</li>
+								<li>Single member creation</li>
+								<li>2014-04-01</li>
+								<li>2014-04-30</li>
+								<li>&nbsp;</li>
+								<li>On creation</li>
+							</ul>
+							<div class="subtitle">Data entry summary</div>
+							<ul class="key2">
+								<li>DIV123-Dept1-APR2014.csv</li>
+								<li>DIV123-Dept1-APR2014.csv</li>
+								<li>Manual entries</li>
+								<li class="total">Total records:</li>
+								<li class="warnings"><span class="color-block"></span>Warnings:</li>
+								<li class="errors"><span class="color-block"></span>Critical errors:</li>
+							</ul>
+							<ul class="data2">
+								<li>67 records</li>
+								<li>17 records</li>
+								<li>3 records</li>
+								<li class="total">87</li>
+								<li class="warnings">15</li>
+								<li class="errors">4</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Error Listing - Warning -->
+				<div id="error-list-warning" class="widget warning">
+					<h2>Error listing warning</h2>
+					<div class="content data-summary total-summary">
+						<div class="desc">This is a description of the error or warning that is currently attributed to the line item that was clicked.</div>
+						<ul class="key1">
+							<li>Severity</li>
+							<li>Field</li>
+							<li>Error</li>
+						</ul>
+						<ul class="data1">
+							<li>Field error</li>
+							<li>Email address</li>
+							<li>Invalid email address</li>
+						</ul>						
+						<div class="action">Approve warning</div>
+						<div class="action">Reject field</div>
+						<div class="action">Reject record</div>
+						<div class="action">Request override</div>
+						<div class="action">Ignore warning</div>
+						<div class="close-line-summary cancel">Cancel</div>
+					</div>
+				</div>
+
+				<!-- Error Listing - Error -->
+				<div id="error-list-error" class="widget error">
+					<h2>Error listing error</h2>
+					<div class="content data-summary total-summary">
+						<div class="desc">This is a description of the error or warning that is currently attributed to the line item that was clicked.</div>
+						<ul class="key1">
+							<li>Severity</li>
+							<li>Field</li>
+							<li>Error</li>
+						</ul>
+						<ul class="data1">
+							<li>Field error</li>
+							<li>Email address</li>
+							<li>Invalid email address</li>
+						</ul>						
+						<div class="action">Approve warning</div>
+						<div class="action">Reject field</div>
+						<div class="action">Reject record</div>
+						<div class="action">Request override</div>
+						<div class="action">Ignore warning</div>
+						<div class="close-line-summary cancel">Cancel</div>
+					</div>
+				</div>
+
+				<!-- Impacted Members - Warning -->
+				<div id="impacted-list-warning" class="widget warning">
+					<h2>Impacted listing warning</h2>
+					<div class="content data-summary line-summary accordions">
+						<div class="desc">This is a description of the error or warning that is currently attributed to the line item that was clicked.</div>
+						<dl data-accordion="" class="accordion">
+							<dd class="accordion-navigation active">
+								<a href="#ilw1" class="tab-panel">Basic member info</a>
+								<div class="content active" id="ilw1">
+									<ul class="key1">
+										<li><b>Start date</b></li>
+										<li><b>End date</b></li>
+										<li><b>Earned salary:</b> $/y (00000.00)</li>
+										<li><b>Contribution:</b> $/y (00000.00)</li>
+										<li><b>Salary rate:</b>  $/y (00000.00)</li>
+										<li><b>Service:</b> (days)</li>
+									</ul>
+									<ul class="data1 summary">
+										<li>00/00/0000</li>
+										<li>00/00/0000</li>
+										<li>00000.00</li>
+										<li>00000.00</li>
+										<li>00000.00</li>
+										<li>000</li>
+									</ul>
+									<ul class="data1 edit" style="display: none;">
+										<li><input type="text" placeholder="00/00/0000"></li>
+										<li><input type="text" placeholder="00/00/0000"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="000"></li>
+									</ul>
+								</div>
+							</dd>
+							<dd class="accordion-navigation">
+								<a href="#ilw2" class="tab-panel">Payroll information</a>
+								<div class="content" id="ilw2">
+									<ul class="key1">
+										<li><b>Start date</b></li>
+										<li><b>End date</b></li>
+										<li><b>Earned salary:</b> $/y (00000.00)</li>
+										<li><b>Contribution:</b> $/y (00000.00)</li>
+										<li><b>Salary rate:</b>  $/y (00000.00)</li>
+										<li><b>Service:</b> (days)</li>
+									</ul>
+									<ul class="data1 summary">
+										<li>00/00/0000</li>
+										<li>00/00/0000</li>
+										<li>00000.00</li>
+										<li>00000.00</li>
+										<li>00000.00</li>
+										<li>000</li>
+									</ul>
+									<ul class="data1 edit" style="display: none;">
+										<li><input type="text" placeholder="00/00/0000"></li>
+										<li><input type="text" placeholder="00/00/0000"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="000"></li>
+									</ul>
+								</div>
+							</dd>
+							<div class="row cancel-save-controls">
+								<div class="medium-8 columns">
+									<div class="ms-portal-button-cancel small">Delete member</div>
+								</div>
+								<div class="medium-4 columns text-right">
+									<div class="ms-portal-button close-line-summary">Save</div>
+								</div>
+							</div>
+						</dl>
+						<div class="edit-button">Edit</div>
+						<div class="action">Approve</div>
+						<div class="close-line-summary cancel">Cancel</div>
+					</div>
+				</div>
+
+				<!-- Impacted Members - Error -->
+				<div id="impacted-list-error" class="widget error">
+					<h2>Impacted listing error</h2>
+					<div class="content data-summary line-summary accordions">
+						<div class="desc">This is a description of the error or warning that is currently attributed to the line item that was clicked.</div>
+						<dl data-accordion="" class="accordion">
+							<dd class="accordion-navigation active">
+								<a href="#ile1" class="tab-panel">Basic member info</a>
+								<div class="content active" id="ile1">
+									<ul class="key1">
+										<li><b>Start date</b></li>
+										<li><b>End date</b></li>
+										<li><b>Earned salary:</b> $/y (00000.00)</li>
+										<li><b>Contribution:</b> $/y (00000.00)</li>
+										<li><b>Salary rate:</b>  $/y (00000.00)</li>
+										<li><b>Service:</b> (days)</li>
+									</ul>
+									<ul class="data1 summary">
+										<li>00/00/0000</li>
+										<li>00/00/0000</li>
+										<li>00000.00</li>
+										<li>00000.00</li>
+										<li>00000.00</li>
+										<li>000</li>
+									</ul>
+									<ul class="data1 edit" style="display: none;">
+										<li><input type="text" placeholder="00/00/0000"></li>
+										<li><input type="text" placeholder="00/00/0000"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="000"></li>
+									</ul>
+								</div>
+							</dd>
+							<dd class="accordion-navigation">
+								<a href="#ile2" class="tab-panel">Payroll information</a>
+								<div class="content" id="ile2">
+									<ul class="key1">
+										<li><b>Start date</b></li>
+										<li><b>End date</b></li>
+										<li><b>Earned salary:</b> $/y (00000.00)</li>
+										<li><b>Contribution:</b> $/y (00000.00)</li>
+										<li><b>Salary rate:</b>  $/y (00000.00)</li>
+										<li><b>Service:</b> (days)</li>
+									</ul>
+									<ul class="data1 summary">
+										<li>00/00/0000</li>
+										<li>00/00/0000</li>
+										<li>00000.00</li>
+										<li>00000.00</li>
+										<li>00000.00</li>
+										<li>000</li>
+									</ul>
+									<ul class="data1 edit" style="display: none;">
+										<li><input type="text" placeholder="00/00/0000"></li>
+										<li><input type="text" placeholder="00/00/0000"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="000"></li>
+									</ul>
+								</div>
+							</dd>
+							<div class="row cancel-save-controls">
+								<div class="medium-8 columns">
+									<div class="ms-portal-button-cancel small">Delete member</div>
+								</div>
+								<div class="medium-4 columns text-right">
+									<div class="ms-portal-button close-line-summary">Save</div>
+								</div>
+							</div>
+						</dl>
+						<div class="edit-button">Edit</div>
+						<div class="action">Approve</div>
+						<div class="close-line-summary cancel">Cancel</div>
+					</div>
+				</div>
+
+				<!-- View All - Default Summary / Edit -->
+				<div id="view-all-edit" class="widget">
+					<h2>New Manual Entry</h2>
+					<div class="content data-summary line-summary accordions">
+						<dl data-accordion="" class="accordion">
+							<dd class="accordion-navigation active">
+								<a href="#panel1b" class="tab-panel">Basic member info</a>
+								<div class="content active" id="panel1b">
+									<ul class="key1">
+										<li><b>Start date</b></li>
+										<li><b>End date</b></li>
+										<li><b>Earned salary:</b> $/y (00000.00)</li>
+										<li><b>Contribution:</b> $/y (00000.00)</li>
+										<li><b>Salary rate:</b>  $/y (00000.00)</li>
+										<li><b>Service:</b> (days)</li>
+									</ul>
+									<ul class="data1">
+										<li><input type="text" placeholder="00/00/0000"></li>
+										<li><input type="text" placeholder="00/00/0000"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="000"></li>
+									</ul>
+								</div>
+							</dd>
+							<dd class="accordion-navigation">
+								<a href="#panel2b" class="tab-panel">Payroll information</a>
+								<div class="content" id="panel2b">
+									<ul class="key1">
+										<li><b>Start date</b></li>
+										<li><b>End date</b></li>
+										<li><b>Earned salary:</b> $/y (00000.00)</li>
+										<li><b>Contribution:</b> $/y (00000.00)</li>
+										<li><b>Salary rate:</b>  $/y (00000.00)</li>
+										<li><b>Service:</b> (days)</li>
+									</ul>
+									<ul class="data1">
+										<li><input type="text" placeholder="00/00/0000"></li>
+										<li><input type="text" placeholder="00/00/0000"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="00000.00"></li>
+										<li><input type="text" placeholder="000"></li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+						<div class="row">
+							<div class="medium-8 columns">
+								<div class="ms-portal-button-cancel small">Delete member</div>
+							</div>
+							<div class="medium-4 columns text-right">
+								<div class="ms-portal-button close-line-summary">Save</div>
+							</div>
+						</div>
+						<div class="close-line-summary cancel">Cancel</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<div class="row">
+			<div class="large-12 columns">
+				<footer>
+					<div class="aux-footer">
+						<nav class="legal-menu">
+							<ul class="menu">
+								<li><a href="#">Privacy</a></li>
+								<li><a href="#">Terms of Use</a></li>
+								<li><a href="#" class="last">Accessibility</a></li>
+							</ul>
+						</nav>
+						<div class="copyright">&copy; 1996-2014 Morneau Shepell Ltd</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+	</div><!-- END #page-container -->
+
+	<script>
+	// Error Listing
+    d3.csv("error-listing.csv" + '?' + Math.floor(Math.random() * 100000	), function(data) {
+		// the columns you'd like to display
+		var columns = ["Severity", "Field", "Error", "Impacted members"];
+
+		var table = d3.select("#error-listing-table").append("table"),
+		thead = table.append("thead"),
+		tbody = table.append("tbody");
+
+		// append the header row
+		thead.append("tr")
+		.selectAll("th")
+		.data(columns)
+		.enter()
+		.append("th")
+		.text(function(column) { return column; });
+
+		// create a row for each object in the data
+		var rows = tbody.selectAll("tr")
+		.data(data)
+		.enter()
+		.append("tr");
+
+		// create a cell in each row for each column
+		var cells = rows.selectAll("td")
+		.data(function(row) {
+			return columns.map(function(column) {
+				return {column: column, value: row[column]};
+			});
+		})
+		.enter()
+		.append("td")
+		.text(function(d) { return d.value; });
+	});
+
+	// Impacted Members
+    d3.csv("impacted.csv" + '?' + Math.floor(Math.random() * 100000	), function(data) {
+		// the columns you'd like to display
+		var columns = ["Severity", "Action", "SIN", "Last name", "First name"];
+
+		var table = d3.select("#impacted-table").append("table"),
+		thead = table.append("thead"),
+		tbody = table.append("tbody");
+
+		// append the header row
+		thead.append("tr")
+		.selectAll("th")
+		.data(columns)
+		.enter()
+		.append("th")
+		.text(function(column) { return column; });
+
+		// create a row for each object in the data
+		var rows = tbody.selectAll("tr")
+		.data(data)
+		.enter()
+		.append("tr");
+
+		// create a cell in each row for each column
+		var cells = rows.selectAll("td")
+		.data(function(row) {
+			return columns.map(function(column) {
+				return {column: column, value: row[column]};
+			});
+		})
+		.enter()
+		.append("td")
+		.text(function(d) { return d.value; });
+	});
+
+	// View All Data
+    d3.csv("view-all.csv" + '?' + Math.floor(Math.random() * 100000	), function(data) {
+		// the columns you'd like to display
+		var columns = ["SIN", "Last name", "First name", "Source"];
+
+		var table = d3.select("#view-all-table").append("table"),
+		thead = table.append("thead"),
+		tbody = table.append("tbody");
+
+		// append the header row
+		thead.append("tr")
+		.selectAll("th")
+		.data(columns)
+		.enter()
+		.append("th")
+		.text(function(column) { return column; });
+
+		// create a row for each object in the data
+		var rows = tbody.selectAll("tr")
+		.data(data)
+		.enter()
+		.append("tr");
+
+		// create a cell in each row for each column
+		var cells = rows.selectAll("td")
+		.data(function(row) {
+			return columns.map(function(column) {
+				return {column: column, value: row[column]};
+			});
+		})
+		.enter()
+		.append("td")
+		.text(function(d) { return d.value; });
+	});
+    </script>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ms.js"></script>
+</body>
+</html>

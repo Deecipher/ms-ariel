@@ -1,0 +1,4 @@
+Severity,Field,Error,Impacted members
+Field Error,Email Address,Invailid Email Address,12
+Field Error,Service Date,Empty Entry,3
+Critical Error,Social Security Number,Invalid Entry,4
