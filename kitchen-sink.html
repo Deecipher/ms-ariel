@@ -12,15 +12,17 @@
 	<script src="./js/imagesLoaded.pkgd.min.js"></script>
 </head>
 <body>
-
+	<!-- This is the left sidebar Navigation: -->
 	<div id="nav">
 		<div id="nav-bg"></div>
 		<ul>
+			<!-- First Item Toggles The menu to expand and contract -->
 			<li>
 				<a id="opn-cls">
 					<div class="icon menu"></div>
 				</a>
 			</li>
+			<!--  /End Open/CLose Toggle -->
 			<li>
 				<a class="active" href="dashboard">
 					<div class="icon dashboard active"></div>
@@ -96,7 +98,9 @@
 			</li>
 		</ul>
 	</div>
+	<!--  /End Sidebar Navigation -->
 
+	<!-- Start Page Content. All Normal Content Goes in Here. -->
 	<div id="page-container">
 
 		<!-- Header -->
@@ -126,6 +130,7 @@
 			</div>
 		</header>
 
+		<!-- Start of Kichen Sink Example Content -->
 		<div class="row">
 			<div class="large-12 columns">
 				<h1>Typography:</h1>
@@ -143,11 +148,13 @@
 				<br>
 			</div>
 		</div>
-		<div class="row">
-			<div class="widget-container large-12 columns">
-				<div class="widget">
-					<h2>Widget Typography: This is an H2 Heading</h2>
-					<div class="content news">
+
+		<!-- A Widget -->
+		<div class="row"><!-- Start a new row -->
+			<div class="widget-container large-12 columns"> <!-- Specify the Widget Width -->
+				<div class="widget"><!--  All widget content must in wrapped in the "widget" class -->
+					<h2>Widget Typography: This is an H2 Heading</h2> <!-- Widget Title -->
+					<div class="content news"><!-- Widget inner contents -->
 						<div class="row">
 							<div class="medium-12 columns">
 								<h3>This is an H3</h3>
@@ -160,9 +167,11 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="widget-container large-12 columns">
+		</div><!-- End Widget -->
+
+		<!-- A Different Style of Widget -->
+		<div class="row"><!-- Start a new row -->
+			<div class="widget-container large-12 columns"><!-- Specify the Widget Width -->
 				<div class="widget slider">
 					<h2>Slider Widget Typography: This is an H2 Heading</h2>
 					<div class="content news">
@@ -178,7 +187,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div><!-- End Widget -->
+
+		<!-- Example Styles for Buttons and Inputs -->
 		<div class="row">
 			<div class="large-12 columns">
 				<h1>Buttons and Inputs:</h1>
@@ -206,17 +217,22 @@
 				<br>
 				<br>
 			</div>
-		</div>
+		</div><!-- End Button and Input Styles -->
+
 		<div class="row">
 			<div class="large-12 columns">
 				<h1>Example Widgets:</h1>
 				<hr>
 			</div>
 		</div>
-		<!-- Widget Container -->
+
+		<!-- All Widget Type Examples Container -->
 		<div class="row">
-			<div id="dashboard" class="js-masonry" data-masonry-options='{ "itemSelector": ".widget-container", "columnWidth": ".large-4" }'>
-				<!-- Widgets -->
+			<div id="dashboard" class="js-masonry" data-masonry-options='{ "itemSelector": ".widget-container", "columnWidth": ".large-4" }'> <!-- Enable Masonry script to dynamically reposition objects/widgets -->
+
+			<!-- Widgets -->
+
+				<!-- News Slider Widget -->
 				<div class="widget-container large-8 columns">
 					<div class="widget slider">
 						<h2>Heading 2, Latest News</h2>
@@ -245,7 +261,9 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> <!-- End News Slider Widget -->
+
+				<!-- Accordian Widget -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
@@ -368,7 +386,9 @@
 							<a href="#" class="ms-portal-button">Portal Button</a>
 						</div>
 					</div>
-				</div>
+				</div><!-- End Accordion Widget -->
+
+				<!-- Item List Widget -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
@@ -454,7 +474,9 @@
 							<a href="/inputdata" class="ms-portal-button">Portal Button</a>
 						</div>
 					</div>
-				</div>
+				</div> <!-- End Item List Widget -->
+
+				<!-- Widget For Messages/Inbox -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
@@ -462,7 +484,7 @@
 						<h2>Widget for Secure Messages, H2</h2>
 						<div class="content listing">
 							<ul>
-								<li class="unread">
+								<li class="unread"><!-- Class required for unread items -->
 									<a href="#">
 										<div class="row">
 											<div class="medium-12 columns">
@@ -473,7 +495,7 @@
 										</div>
 									</a>
 								</li>
-								<li>
+								<li><!-- No Class/remove "unread" class for Read items -->
 									<a href="#">
 										<div class="row">
 											<div class="medium-12 columns">
@@ -484,7 +506,7 @@
 										</div>
 									</a>
 								</li>
-								<li class="unread">
+								<li class="unread"><!-- Class required for unread items -->
 									<a href="#">
 										<div class="row">
 											<div class="medium-12 columns">
@@ -495,7 +517,7 @@
 										</div>
 									</a>
 								</li>
-								<li>
+								<li><!-- No Class/remove "unread" class for Read items -->
 									<a href="#">
 										<div class="row">
 											<div class="medium-12 columns">
@@ -506,7 +528,7 @@
 										</div>
 									</a>
 								</li>
-								<li class="unread">
+								<li class="unread"><!-- Class required for unread items -->
 									<a href="#">
 										<div class="row">
 											<div class="medium-12 columns">
@@ -530,7 +552,9 @@
 							<a href="#" class="ms-portal-button">Create new message</a>
 						</div>
 					</div>
-				</div>
+				</div><!-- End Widget For Messages/Inbox -->
+
+				<!-- Team Profile Widget -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
@@ -541,7 +565,7 @@
 							<div class="row team-members">
 								<div class="medium-6 columns">
 									<a href="#">
-										<div class="profile-img">
+										<div class="profile-img"><!-- Member Picture Goes Here -->
 											<img src="./css/img/ariel_team-user-profile.svg" alt="User's Name">
 										</div>
 										<div class="name">Steve Smith</div>
@@ -550,7 +574,7 @@
 								</div>
 								<div class="medium-6 columns">
 									<a href="#">
-										<div class="profile-img">
+										<div class="profile-img"><!-- Member Picture Goes Here -->
 											<img src="./css/img/ariel_team-user-profile.svg" alt="User's Name">
 										</div>
 										<div class="name">Stefani Jones</div>
@@ -569,7 +593,9 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div><!--  End Team Profile Widget -->
+
+				<!-- Widget for Listing Members -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
@@ -634,7 +660,9 @@
 							<a href="#" class="ms-portal-button">Create new message</a>
 						</div>
 					</div>
-				</div>
+				</div><!-- End Widget for Listing Members -->
+
+				<!-- Member Search Widget -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
@@ -643,13 +671,9 @@
 						<div class="content find">
 							<p>A paragraph. Add a description here if you want.</p>
 							<div class="row collapse">
-								<div class="small-10 columns">
-									<input type="text" placeholder="Search">
-								</div>
-								<div class="small-2 columns text-right">
-									<a href="#">
-										<img src="http://placehold.it/38">
-									</a>
+								<div class="search">
+									<div class="search-input"><input type="text" placeholder="Search"></div>
+									<a href="#" class="search-submit"><img src="./css/img/ariel_second-nav-search.svg" alt="Search"></a>
 								</div>
 							</div>
 							<ul>
@@ -660,7 +684,9 @@
 							<a href="#" class="ms-portal-button">Add a member</a>
 						</div>
 					</div>
-				</div>
+				</div><!-- End Member Search Widget -->
+
+				<!-- Accordion widget for files -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
@@ -677,7 +703,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -688,7 +714,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -699,7 +725,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -717,7 +743,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -728,7 +754,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -739,7 +765,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -757,7 +783,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -768,7 +794,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -779,7 +805,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -794,6 +820,8 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- Data Summary Widget -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<h2>Data collection summary</h2>
@@ -827,7 +855,9 @@
 							</ul>
 						</div>
 					</div>
-				</div>
+				</div><!-- End Data Summary Widget -->
+
+				<!-- Data Entry Widget -->
 				<div id="data-entry" class="widget-container large-4 columns">
 					<div class="widget">
 						<h2>Widget For Data Entry</h2>
@@ -887,9 +917,12 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div><!-- End Widget Container -->
+				</div><!-- End Data Entry Widget -->
+
+			</div><!-- End Masonry Section -->
+		</div><!-- End Widget Type Examples Container -->
+
+		<!-- A few more Content Type Examples: -->
 
 		<div class="row">
 			<div class="large-12 columns">
@@ -898,8 +931,9 @@
 			</div>
 		</div>
 
+		<!-- Content Inside Selectable Tabs: -->
 		<div class="row">
-			<div class="large-8 columns main">
+			<div class="large-12 columns main">
 				<dl class="tabs" data-tab>
 					<dd class="active"><a href="#panel1">Test</a></dd>
 					<dd><a href="#panel2">Test</a></dd>
@@ -908,15 +942,16 @@
 						<div class="title">Alt Tab Button</div>
 					</div>
 				</dl>
-				<div class="tabs-content">
+				<div class="tabs-content"><!-- Tab 1 -->
 					<div class="content active" id="panel1">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate quis magna quis scelerisque. Proin tempus imperdiet facilisis. Nullam vitae rutrum lectus. Maecenas faucibus felis fermentum, volutpat felis et, aliquam leo. Integer eget lectus ut ante porta lacinia. Vestibulum maximus orci mi, ac porta quam porttitor nec. Nam iaculis imperdiet gravida. Donec ut fermentum risus. Duis at nunc mattis, dapibus dui sed, maximus nisi. In tincidunt purus tempus, bibendum lacus blandit, luctus leo.</p>
 					</div>
-					<div class="content" id="panel2">
+					<div class="content" id="panel2"><!-- Tab 2 -->
 						<p>Proin tempus imperdiet facilisis. Nullam vitae rutrum lectus. Maecenas faucibus felis fermentum, volutpat felis et, aliquam leo. Integer eget lectus ut ante porta lacinia. Vestibulum maximus orci mi, ac porta quam porttitor nec. Nam iaculis imperdiet gravida. Donec ut fermentum risus. Duis at nunc mattis, dapibus dui sed, maximus nisi. In tincidunt purus tempus, bibendum lacus blandit, luctus leo.</p>
 					</div>
 				</div>
-		</div>
+			</div>
+		</div><!-- End Content Inside Selectable Tabs -->
 
 		<div class="row">
 			<div class="large-12 columns">
@@ -924,6 +959,8 @@
 				<hr>
 			</div>
 		</div>
+
+		<!-- A Table of Data with Example Data Types -->
 		<div class="row">
 			<div class="large-12 columns">
 				<div id="inputdata-table">
@@ -938,21 +975,21 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="warning">
+							<tr class="warning"><!-- Denotes a Warning item -->
 								<td><span class="color-block"></span>Field error</td>
 								<td>Test</td>
 								<td>Test</td>
 								<td>Test</td>
 								<td>Test</td>
 							</tr>
-							<tr class="error">
+							<tr class="error"><!-- Denotes an Error Item -->
 								<td><span class="color-block"></span>Critical error</td>
 								<td>Test</td>
 								<td>Test</td>
 								<td>Test</td>
 								<td>Test</td>
 							</tr>
-							<tr>
+							<tr><!-- Regular Table items have no class -->
 								<td>Normal Entry</td>
 								<td>Test</td>
 								<td>Test</td>
@@ -963,7 +1000,7 @@
 					</table>
 				</div>
 			</div>
-		</div>
+		</div><!-- End Table Content -->
 
 		<div class="row">
 			<div class="large-12 columns">
@@ -971,9 +1008,10 @@
 			</div>
 		</div>
 
+		<!-- An Upload / Drag and Drop Interface -->
 		<div class="row">
-			<div class="large-12 columns main">
-				<div class="tabs-content">
+			<div class="large-12 columns main"><!-- Must be wrapped in "main" -->
+				<div class="tabs-content"><!-- Must be in "tabs-content" class -->
 					<div class="content active" id="panel1">
 						<p>Select the files that contain the data you want to add into the data collection.</p>
 						<div id="file-upload">
@@ -982,7 +1020,7 @@
 							<div id="add-file" class="ms-portal-button">Select files from your computer</div>
 							<div class="fine-print">Accepted files: CSV, TXT, DTB. Maximum file size 35MB. Having problem uploading a file? Check the <a href="#">Help</a> page.</div>
 						</div>
-						<div id="upload-verification">
+						<div id="upload-verification"><!-- Shows item info and status after uploaded -->
 							<img src="./css/img/ariel_documents-icon-file.svg" alt="">
 							<div class="upload">
 								<a href="#">DIV123-Dept1-APR2014.csv</a> imported (67 records)
@@ -995,25 +1033,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="content" id="panel2">
-						<div id="inputdata-table"></div>
-						<div class="row">
-							<div class="small-12 columns text-center">
-								<div class="pager">
-									<div class="row">
-										<div class="small-12 columns">		
-											<a class="prev" href="#"></a>
-											<span>1 of 2</span>
-											<a class="next" href="#"></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
-		</div>
+		</div><!-- End Upload / Drag and Drop Interface -->
 
 		<!-- FOOTER -->
 		<div class="row">
