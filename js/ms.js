@@ -1,20 +1,6 @@
-// Menu Open / Close Function
-
 $(document).ready(function(){
 
-	// // initialize Masonry
-	// var $container = $('#dashboard').masonry();
-	// // layout Masonry again after all images have loaded
-	// $container.imagesLoaded( function() {
-	// 	$container.masonry({
-	// 		columnWidth: '.large-4',
-	// 		itemSelector: '.widget-container'
-	// 	});
-	// });
-
-	// var $container = $('#dashboard');
-	// // initialize
-	// $container.masonry();
+	// Menu Open / Close Function
 
 	$('#opn-cls').click(function(){
 		// Check if the nav is open. If it is, close it.
