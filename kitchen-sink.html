@@ -1,103 +1,132 @@
-<!doctype html>
 <html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Kitchen Sink | Ariel DB | MS</title>
+	<title>Kitchen Sink | Arial DB | MS</title>
 	<link rel="stylesheet" href="css/app.css" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet' type='text/css'>
 	<script src="bower_components/modernizr/modernizr.js"></script>
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	<script src="/js/masonry.pkgd.min.js"></script>
+	<script src="./js/masonry.pkgd.min.js"></script>
+	<script src="./js/imagesLoaded.pkgd.min.js"></script>
 </head>
 <body>
-
+	<!-- This is the left sidebar Navigation: -->
 	<div id="nav">
 		<div id="nav-bg"></div>
 		<ul>
+			<!-- First Item Toggles The menu to expand and contract -->
 			<li>
 				<a id="opn-cls">
-					<img src="http://placehold.it/40" alt="" class="icon">
-					<!-- <span class="title">Open &amp; Close Button</span> -->
+					<div class="icon menu"></div>
+				</a>
+			</li>
+			<!-- /End Open/CLose Toggle -->
+			<li>
+				<a class="active" href="dashboard">
+					<div class="icon dashboard active"></div>
+					<span class="title">Dashboard</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
-					<img src="http://placehold.it/40" alt="" class="icon">
-					<span class="title">Kitchen Sink</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="http://placehold.it/40" alt="" class="icon">
+				<div>
+					<div class="icon members"></div>
 					<span class="title">Members</span>
-				</a>
+					<div class="subnav">
+						<div class="indicator">
+							<img src="./css/img/ariel_menu-active-indicator-l.svg" alt="">
+						</div>
+						<ul>
+							<li><a href="#">Test</a></li>
+							<li><a href="#">Test</a></li>
+							<li><a href="#">Test</a></li>
+						</ul>
+					</div>
+				</div>
 			</li>
 			<li>
-				<a href="#">
-					<img src="http://placehold.it/40" alt="" class="icon">
+				<div>
+					<div class="icon messages"></div>
 					<span class="title">My Secure Messages</span>
-				</a>
+					<div class="subnav">
+						<div class="indicator">
+							<img src="./css/img/ariel_menu-active-indicator-l.svg" alt="">
+						</div>
+						<ul>
+							<li><a href="#">Test</a></li>
+							<li><a href="#">Test</a></li>
+							<li><a href="#">Test</a></li>
+						</ul>
+					</div>
+				</div>
 			</li>
 			<li>
-				<a href="#">
-					<img src="http://placehold.it/40" alt="" class="icon">
+				<div>
+					<div class="icon process"></div>
 					<span class="title">Process Management</span>
-				</a>
+					<div class="subnav">
+						<div class="indicator">
+							<img src="./css/img/ariel_menu-active-indicator-l.svg" alt="">
+						</div>
+						<ul>
+							<li><a href="data-collection-id">Data Collection</a></li>
+							<li><a href="">Member Processes</a></li>
+							<li><a href="">Remittances</a></li>
+							<li><a href="">Education Workshop</a></li>
+						</ul>
+					</div>
+				</div>
 			</li>
 			<li>
 				<a href="#">
-					<img src="http://placehold.it/40" alt="" class="icon">
+					<div class="icon reports"></div>
 					<span class="title">Reports &amp; Documents</span>
 				</a>
 			</li>
 			<li>
 				<a href="#">
-					<img src="http://placehold.it/40" alt="" class="icon">
+					<div class="icon admin"></div>
 					<span class="title">Administration</span>
 				</a>
 			</li>
 			<li>
 				<a href="#">
-					<img src="http://placehold.it/40" alt="" class="icon">
+					<div class="icon help"></div>
 					<span class="title">Help</span>
 				</a>
 			</li>
 		</ul>
 	</div>
-
+	<!-- /End Sidebar Navigation -->
+	<!-- Start Page Content. All Normal Content Goes in Here. -->
 	<div id="page-container">
-
 		<!-- Header -->
 		<header class="row">
 			<div class="large-4 columns">
 				<!-- Client Logo -->
-				<img id="logo" src="http://placehold.it/250x75&text=LOGO+250+x+75" alt="Client Logo">
+				<img id="logo" src="./css/img/logo.gif" alt="Client Logo">
 			</div>
 			<div class="large-8 columns">
 				<!-- Secondary Nav Items -->
 				<div id="nav-sec">
 					<div class="search">
 						<div class="search-input"><input type="text" placeholder="Search"></div>
-						<a href="#" class="search-submit"><img src="http://placehold.it/30" alt=""></a>
+						<a href="#" class="search-submit"><img src="./css/img/ariel_second-nav-search.svg" alt="Search"></a>
 					</div>
 					<div class="lang">
 						<a href="#" class="active">EN</a> <a href="#">FR</a>
 					</div>
 					<div class="account">
-						company name &nbsp;|&nbsp; name.lastname &nbsp;&nbsp;<img src="http://placehold.it/30" alt="">
+						company name &nbsp;|&nbsp; name.lastname &nbsp;&nbsp;<img src="./css/img/ariel_second-nav-user.svg" alt="User">
 					</div>
 				</div>
 			</div>
 			<div class="large-12 columns">
 				<!-- Page Title -->
-				<div class="breadcrumb">
-					<a href="/dashboard">Breadcrumbs</a> &raquo; <a href="#">Sub Page</a> &raquo; Current Page
-				</div>
-				<h1>Kitchen Sink</h1>
+				<h1>Dashboard</h1>
 			</div>
 		</header>
-
+		<!-- Start of Kichen Sink Example Content -->
 		<div class="row">
 			<div class="large-12 columns">
 				<h1>Typography:</h1>
@@ -115,11 +144,12 @@
 				<br>
 			</div>
 		</div>
-		<div class="row">
-			<div class="widget-container large-12 columns">
-				<div class="widget">
-					<h2>Widget Typography: This is an H2 Heading</h2>
-					<div class="content news">
+		<!-- A Widget -->
+		<div class="row"><!-- Start a new row -->
+			<div class="widget-container large-12 columns"> <!-- Specify the Widget Width -->
+				<div class="widget"><!-- All widget content must in wrapped in the "widget" class -->
+					<h2>Widget Typography: This is an H2 Heading</h2> <!-- Widget Title -->
+					<div class="content news"><!-- Widget inner contents -->
 						<div class="row">
 							<div class="medium-12 columns">
 								<h3>This is an H3</h3>
@@ -132,9 +162,10 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="widget-container large-12 columns">
+		</div><!-- End Widget -->
+		<!-- A Different Style of Widget -->
+		<div class="row"><!-- Start a new row -->
+			<div class="widget-container large-12 columns"><!-- Specify the Widget Width -->
 				<div class="widget slider">
 					<h2>Slider Widget Typography: This is an H2 Heading</h2>
 					<div class="content news">
@@ -150,7 +181,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div><!-- End Widget -->
+		<!-- Example Styles for Buttons and Inputs -->
 		<div class="row">
 			<div class="large-12 columns">
 				<h1>Buttons and Inputs:</h1>
@@ -159,48 +191,46 @@
 				<div class="pager">
 					<div class="row">
 						<div class="small-12 columns">
-							<p>Pager:</p>						
-							<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
+							<a class="prev" href="#"></a>
 							<span>1 of 2</span>
-							<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
+							<a class="next" href="#"></a>
 						</div>
 					</div>
 				</div>
 				<br>
 				<br>
-				<div class="row collapse">
+				<div class="row collapse nav-sec">
 					<div class="small-4 columns">
-						<input type="text" placeholder="Search">
-					</div>
-					<div class="small-2 end columns">
-						<a href="#">
-							<img src="http://placehold.it/38">
-						</a>
+						<div class="search">
+							<div class="search-input"><input type="text" placeholder="Search"></div>
+							<a href="#" class="search-submit"><img src="./css/img/ariel_second-nav-search.svg" alt="Search"></a>
+						</div>
 					</div>
 				</div>
 				<br>
 				<br>
 			</div>
-		</div>
+		</div><!-- End Button and Input Styles -->
 		<div class="row">
 			<div class="large-12 columns">
 				<h1>Example Widgets:</h1>
 				<hr>
 			</div>
 		</div>
-		<!-- Widget Container -->
+		<!-- All Widget Type Examples Container -->
 		<div class="row">
-			<div id="dashboard" class="js-masonry" data-masonry-options='{ "itemSelector": ".widget-container", "columnWidth": ".large-4" }'>
+			<div id="dashboard" class="js-masonry" data-masonry-options='{ "itemSelector": ".widget-container", "columnWidth": ".large-4" }'> <!-- Enable Masonry script to dynamically reposition objects/widgets -->
 				<!-- Widgets -->
+				<!-- News Slider Widget -->
 				<div class="widget-container large-8 columns">
 					<div class="widget slider">
 						<h2>Heading 2, Latest News</h2>
 						<div class="pager">
 							<div class="row">
-								<div class="small-12 columns">								
-									<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
+								<div class="small-12 columns">
+									<a class="prev" href="#"></a>
 									<span>1 of 2</span>
-									<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
+									<a class="next" href="#"></a>
 								</div>
 							</div>
 						</div>
@@ -220,13 +250,15 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> <!-- End News Slider Widget -->
+				<!-- Accordian Widget -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
 						<div class="widget-control"></div>
 						<h2>Widget With Accordian, H2</h2>
 						<div class="content accordions">
+							<!-- Accordion tab-panels and their respective content should have unique identifiers -->
 							<dl data-accordion="" class="accordion">
 								<dd class="accordion-navigation active">
 									<a href="#panel1a" class="tab-panel">Accordian Tab One</a>
@@ -342,7 +374,8 @@
 							<a href="#" class="ms-portal-button">Portal Button</a>
 						</div>
 					</div>
-				</div>
+				</div><!-- End Accordion Widget -->
+				<!-- Item List Widget -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
@@ -418,17 +451,18 @@
 							</ul>
 							<div class="pager text-center">
 								<div class="row">
-									<div class="small-12 columns">								
-										<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
+									<div class="small-12 columns">
+										<a class="prev" href="#"></a>
 										<span>1 of 2</span>
-										<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
+										<a class="next" href="#"></a>
 									</div>
 								</div>
 							</div>
 							<a href="/inputdata" class="ms-portal-button">Portal Button</a>
 						</div>
 					</div>
-				</div>
+				</div> <!-- End Item List Widget -->
+				<!-- Widget For Messages/Inbox -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
@@ -436,7 +470,7 @@
 						<h2>Widget for Secure Messages, H2</h2>
 						<div class="content listing">
 							<ul>
-								<li class="unread">
+								<li class="unread"><!-- Class required for unread items -->
 									<a href="#">
 										<div class="row">
 											<div class="medium-12 columns">
@@ -447,7 +481,7 @@
 										</div>
 									</a>
 								</li>
-								<li>
+								<li><!-- No Class/remove "unread" class for Read items -->
 									<a href="#">
 										<div class="row">
 											<div class="medium-12 columns">
@@ -458,7 +492,7 @@
 										</div>
 									</a>
 								</li>
-								<li class="unread">
+								<li class="unread"><!-- Class required for unread items -->
 									<a href="#">
 										<div class="row">
 											<div class="medium-12 columns">
@@ -469,7 +503,7 @@
 										</div>
 									</a>
 								</li>
-								<li>
+								<li><!-- No Class/remove "unread" class for Read items -->
 									<a href="#">
 										<div class="row">
 											<div class="medium-12 columns">
@@ -480,7 +514,7 @@
 										</div>
 									</a>
 								</li>
-								<li class="unread">
+								<li class="unread"><!-- Class required for unread items -->
 									<a href="#">
 										<div class="row">
 											<div class="medium-12 columns">
@@ -494,17 +528,18 @@
 							</ul>
 							<div class="pager text-center">
 								<div class="row">
-									<div class="small-12 columns">								
-										<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
+									<div class="small-12 columns">
+										<a class="prev" href="#"></a>
 										<span>1 of 2</span>
-										<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
+										<a class="next" href="#"></a>
 									</div>
 								</div>
 							</div>
 							<a href="#" class="ms-portal-button">Create new message</a>
 						</div>
 					</div>
-				</div>
+				</div><!-- End Widget For Messages/Inbox -->
+				<!-- Team Profile Widget -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
@@ -515,8 +550,8 @@
 							<div class="row team-members">
 								<div class="medium-6 columns">
 									<a href="#">
-										<div class="profile-img">
-											<img src="http://placehold.it/500&text=Portrait+500+x+500" alt="">
+										<div class="profile-img"><!-- Member Picture Goes Here -->
+											<img src="./css/img/ariel_team-user-profile.svg" alt="User's Name">
 										</div>
 										<div class="name">Steve Smith</div>
 										<div class="title">Advisor</div>
@@ -524,8 +559,8 @@
 								</div>
 								<div class="medium-6 columns">
 									<a href="#">
-										<div class="profile-img">
-											<img src="http://placehold.it/500&text=Portrait+500+x+500" alt="">
+										<div class="profile-img"><!-- Member Picture Goes Here -->
+											<img src="./css/img/ariel_team-user-profile.svg" alt="User's Name">
 										</div>
 										<div class="name">Stefani Jones</div>
 										<div class="title">Specialist</div>
@@ -534,16 +569,17 @@
 							</div>
 							<div class="pager text-center">
 								<div class="row">
-									<div class="small-12 columns">								
-										<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
-										<span>1 of 7</span>
-										<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
+									<div class="small-12 columns">
+										<a class="prev" href="#"></a>
+										<span>1 of 2</span>
+										<a class="next" href="#"></a>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div><!-- End Team Profile Widget -->
+				<!-- Widget for Listing Members -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
@@ -598,17 +634,18 @@
 							</ul>
 							<div class="pager text-center">
 								<div class="row">
-									<div class="small-12 columns">								
-										<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
+									<div class="small-12 columns">
+										<a class="prev" href="#"></a>
 										<span>1 of 2</span>
-										<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
+										<a class="next" href="#"></a>
 									</div>
 								</div>
 							</div>
 							<a href="#" class="ms-portal-button">Create new message</a>
 						</div>
 					</div>
-				</div>
+				</div><!-- End Widget for Listing Members -->
+				<!-- Member Search Widget -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
@@ -617,13 +654,9 @@
 						<div class="content find">
 							<p>A paragraph. Add a description here if you want.</p>
 							<div class="row collapse">
-								<div class="small-10 columns">
-									<input type="text" placeholder="Search">
-								</div>
-								<div class="small-2 columns text-right">
-									<a href="#">
-										<img src="http://placehold.it/38">
-									</a>
+								<div class="search">
+									<div class="search-input"><input type="text" placeholder="Search"></div>
+									<a href="#" class="search-submit"><img src="./css/img/ariel_second-nav-search.svg" alt="Search"></a>
 								</div>
 							</div>
 							<ul>
@@ -634,13 +667,15 @@
 							<a href="#" class="ms-portal-button">Add a member</a>
 						</div>
 					</div>
-				</div>
+				</div><!-- End Member Search Widget -->
+				<!-- Accordion widget for files -->
 				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<div class="widget-expand"></div>
 						<div class="widget-control"></div>
 						<h2>Accordian Widget For Files & Documents</h2>
 						<div class="content accordions">
+							<!-- Accordion tab-panels and their respective content should have unique identifiers -->
 							<dl data-accordion="" class="accordion">
 								<dd class="accordion-navigation active">
 									<a href="#panel1b" class="tab-panel">My documents</a>
@@ -650,7 +685,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -661,7 +696,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -672,7 +707,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -690,7 +725,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -701,7 +736,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -712,7 +747,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -730,7 +765,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -741,7 +776,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -752,7 +787,7 @@
 												<a href="#">
 													<div class="row">
 														<div class="medium-12 columns">
-															<img src="http://placehold.it/33" alt="" class="icon">
+															<img src="http://placehold.it/33" alt="" class="icon"><!-- Filetype Icon or Thumbnail Goes Here -->
 															<div class="title">Name of the file</div>
 															<div class="type-date">Document Type | 00.00.0000</div>
 														</div>
@@ -767,96 +802,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div><!-- End Widget Container -->
-
-		<div class="row">
-			<div class="large-12 columns">
-				<h1>Data Collection Dialog:</h1>
-				<hr>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="large-8 columns main">
-				<div class="row process-state">
-					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-					viewBox="0 0 751.5 51" enable-background="new 0 0 751.5 51" xml:space="preserve">
-						<polygon fill="#00ACCD" points="-4.8,0 246.3,0 258.8,25.5 246.3,51 -4.8,51 "/>
-						<polygon fill="none" stroke="#00ACCD" stroke-miterlimit="10" points="254.1,0.5 503.8,0.5 516.1,25.5 503.8,50.5 254.1,50.5 
-						266.4,25.5 "/>
-						<polygon fill="none" stroke="#00ACCD" stroke-miterlimit="10" points="511.4,0.5 751,0.5 751,25.5 751,50.5 511.4,50.5 523.7,25.5 
-						"/>
-					</svg>
-					<div class="large-4 columns">
-						<div class="text-center state current">1. Input Data</div>
-					</div>
-					<div class="large-4 columns">
-						<div class="text-center state">2. Review Data</div>
-					</div>
-					<div class="large-4 columns">
-						<div class="text-center state">3. Submit</div>
-					</div>
-				</div>
-				<dl class="tabs" data-tab>
-					<dd class="active"><a href="#panel1">File View</a></dd>
-					<dd><a href="#panel2">Data View</a></dd>
-					<div id="manual-entry">
-						<div class="plus">+</div>
-						<div class="title">Manual Entry</div>
-					</div>
-				</dl>
-				<div class="tabs-content">
-					<div class="content active" id="panel1">
-						<p>Select the files that contain the data you want to add into the data collection.</p>
-						<div id="file-upload">
-							<div class="cta-text"><b>DROP</b> files here</div>
-							<p>or</p>
-							<div id="add-file" class="ms-portal-button">Select files from your computer</div>
-							<div class="fine-print">Accepted files: CSV, TXT, DTB. Maximum file size 35MB. Having problem uploading a file? Check the <a href="#">Help</a> page.</div>
-						</div>
-						<div id="csv-template">
-							<a href="#">Download a template file with data (.CSV)</a>
-						</div>
-						<div id="upload-verification">
-							<img src="http://placehold.it/25" alt="">
-							<div class="upload">
-								<a href="#">DIV123-Dept1-APR2014.csv</a> imported (67 records)
-								<div class="message">
-									File succefully imported. No errors found.
-								</div>
-								<div class="controls">
-									<a class="remove" href="#">Remove</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="content" id="panel2">
-						<div id="inputdata-table"></div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="small-12 columns text-center">
-						<div class="pager">
-							<div class="row">
-								<div class="small-12 columns">								
-									<a href="#"><img src="http://placehold.it/16" alt="Previous"></a>
-									<span>1 of 9</span>
-									<a href="#"><img src="http://placehold.it/16" alt="Next"></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="medium-6 columns">
-						<a href="#" class="ms-portal-button-noarrow">Cancel</a>
-					</div>
-					<div class="medium-6 columns text-right">
-						<a href="#" class="ms-portal-button-continue">Continue</a>
-					</div>
-				</div>
-			</div>
-			<div class="large-4 columns secondary">
-				<div id="total-summary">
+				<!-- Data Summary Widget -->
+				<div class="widget-container large-4 columns">
 					<div class="widget">
 						<h2>Data collection summary</h2>
 						<div class="content data-input total-summary">
@@ -889,21 +836,23 @@
 							</ul>
 						</div>
 					</div>
-				</div>
-				<div id="line-summary">
+				</div><!-- End Data Summary Widget -->
+				<!-- Data Entry Widget -->
+				<div id="data-entry" class="widget-container large-4 columns">
 					<div class="widget">
-						<h2>1234567890 - Doe, John</h2>
-						<div class="content data-input line-summary accordions">
+						<h2>Widget For Data Entry</h2>
+						<div class="content data-summary line-summary accordions">
+							<!-- Accordion tab-panels and their respective content should have unique identifiers -->
 							<dl data-accordion="" class="accordion">
-								<dd class="accordion-navigation">
-									<a href="#panel1b" class="tab-panel">Basic member info</a>
-									<div class="content" id="panel1b">
+								<dd class="accordion-navigation active">
+									<a href="#panel1c" class="tab-panel">Data Collection Accordion</a>
+									<div class="content active" id="panel1c">
 										<ul class="key1">
 											<li><b>Start date</b></li>
 											<li><b>End date</b></li>
 											<li><b>Earned salary:</b> $/y (00000.00)</li>
 											<li><b>Contribution:</b> $/y (00000.00)</li>
-											<li><b>Salary rate:</b>  $/y (00000.00)</li>
+											<li><b>Salary rate:</b> $/y (00000.00)</li>
 											<li><b>Service:</b> (days)</li>
 										</ul>
 										<ul class="data1">
@@ -916,15 +865,15 @@
 										</ul>
 									</div>
 								</dd>
-								<dd class="accordion-navigation active">
-									<a href="#panel2b" class="tab-panel">Payroll information</a>
-									<div class="content active" id="panel2b">
+								<dd class="accordion-navigation">
+									<a href="#panel2c" class="tab-panel">Data Collection Accordion</a>
+									<div class="content" id="panel2c">
 										<ul class="key1">
 											<li><b>Start date</b></li>
 											<li><b>End date</b></li>
 											<li><b>Earned salary:</b> $/y (00000.00)</li>
 											<li><b>Contribution:</b> $/y (00000.00)</li>
-											<li><b>Salary rate:</b>  $/y (00000.00)</li>
+											<li><b>Salary rate:</b> $/y (00000.00)</li>
 											<li><b>Service:</b> (days)</li>
 										</ul>
 										<ul class="data1">
@@ -948,10 +897,117 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div><!-- End Data Entry Widget -->
+			</div><!-- End Masonry Section -->
+		</div><!-- End Widget Type Examples Container -->
+		<!-- A few more Content Type Examples: -->
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>Tabs:</h1>
+				<hr>
 			</div>
 		</div>
-
+		<!-- Content Inside Selectable Tabs: -->
+		<div class="row">
+			<div class="large-12 columns main">
+				<dl class="tabs" data-tab>
+					<dd class="active"><a href="#panel1">Test</a></dd>
+					<dd><a href="#panel2">Test</a></dd>
+					<div id="manual-entry">
+						<div class="plus">+</div>
+						<div class="title">Alt Tab Button</div>
+					</div>
+				</dl>
+				<div class="tabs-content"><!-- Tab 1 -->
+					<div class="content active" id="panel1">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate quis magna quis scelerisque. Proin tempus imperdiet facilisis. Nullam vitae rutrum lectus. Maecenas faucibus felis fermentum, volutpat felis et, aliquam leo. Integer eget lectus ut ante porta lacinia. Vestibulum maximus orci mi, ac porta quam porttitor nec. Nam iaculis imperdiet gravida. Donec ut fermentum risus. Duis at nunc mattis, dapibus dui sed, maximus nisi. In tincidunt purus tempus, bibendum lacus blandit, luctus leo.</p>
+					</div>
+					<div class="content" id="panel2"><!-- Tab 2 -->
+						<p>Proin tempus imperdiet facilisis. Nullam vitae rutrum lectus. Maecenas faucibus felis fermentum, volutpat felis et, aliquam leo. Integer eget lectus ut ante porta lacinia. Vestibulum maximus orci mi, ac porta quam porttitor nec. Nam iaculis imperdiet gravida. Donec ut fermentum risus. Duis at nunc mattis, dapibus dui sed, maximus nisi. In tincidunt purus tempus, bibendum lacus blandit, luctus leo.</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- End Content Inside Selectable Tabs -->
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>Table:</h1>
+				<hr>
+			</div>
+		</div>
+		<!-- A Table of Data with Example Data Types -->
+		<div class="row">
+			<div class="large-12 columns">
+				<div id="inputdata-table">
+					<table>
+						<thead>
+							<tr>
+								<th>Test</th>
+								<th>Test</th>
+								<th>Test</th>
+								<th>Test</th>
+								<th>Test</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="warning"><!-- Denotes a Warning item -->
+								<td><span class="color-block"></span>Field error</td>
+								<td>Test</td>
+								<td>Test</td>
+								<td>Test</td>
+								<td>Test</td>
+							</tr>
+							<tr class="error"><!-- Denotes an Error Item -->
+								<td><span class="color-block"></span>Critical error</td>
+								<td>Test</td>
+								<td>Test</td>
+								<td>Test</td>
+								<td>Test</td>
+							</tr>
+							<tr><!-- Regular Table items have no class -->
+								<td>Normal Entry</td>
+								<td>Test</td>
+								<td>Test</td>
+								<td>Test</td>
+								<td>Test</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div><!-- End Table Content -->
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>File Upload Dialog:</h1>
+			</div>
+		</div>
+		<!-- An Upload / Drag and Drop Interface -->
+		<div class="row">
+			<div class="large-12 columns main"><!-- Must be wrapped in "main" -->
+				<div class="tabs-content"><!-- Must be in "tabs-content" class -->
+					<div class="content active" id="panel1">
+						<p>Select the files that contain the data you want to add into the data collection.</p>
+						<div id="file-upload">
+							<div class="cta-text"><b>DROP</b> files here</div>
+							<p>or</p>
+							<div id="add-file" class="ms-portal-button">Select files from your computer</div>
+							<div class="fine-print">Accepted files: CSV, TXT, DTB. Maximum file size 35MB. Having problem uploading a file? Check the <a href="#">Help</a> page.</div>
+						</div>
+						<div id="upload-verification"><!-- Shows item info and status after uploaded -->
+							<img src="./css/img/ariel_documents-icon-file.svg" alt="">
+							<div class="upload">
+								<a href="#">DIV123-Dept1-APR2014.csv</a> imported (67 records)
+								<div class="message">
+									File succefully imported. No errors found.
+								</div>
+								<div class="controls">
+									<a class="remove" href="#">Remove</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- End Upload / Drag and Drop Interface -->
 		<!-- FOOTER -->
 		<div class="row">
 			<div class="large-12 columns">
@@ -969,48 +1025,23 @@
 				</footer>
 			</div>
 		</div>
-
 	</div> <!-- End Page Container -->
-
-	<script>
-    d3.csv("data.csv" + '?' + Math.floor(Math.random() * 100000	), function(data) {
-		// the columns you'd like to display
-		var columns = ["SIN", "Last name", "First name", "Source"];
-
-		var table = d3.select("#inputdata-table").append("table"),
-		thead = table.append("thead"),
-		tbody = table.append("tbody");
-
-		// append the header row
-		thead.append("tr")
-		.selectAll("th")
-		.data(columns)
-		.enter()
-		.append("th")
-		.text(function(column) { return column; });
-
-		// create a row for each object in the data
-		var rows = tbody.selectAll("tr")
-		.data(data)
-		.enter()
-		.append("tr");
-
-		// create a cell in each row for each column
-		var cells = rows.selectAll("td")
-		.data(function(row) {
-			return columns.map(function(column) {
-				return {column: column, value: row[column]};
-			});
-		})
-		.enter()
-		.append("td")
-		.text(function(d) { return d.value; });
-	});
-    </script>
-
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/foundation/js/foundation.min.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/ms.js"></script>
+	<script>
+// Initialize Dashboard
+var container = document.querySelector('#dashboard');
+var msnry;
+// initialize Masonry after all images have loaded
+imagesLoaded( container, function() {
+	msnry = new Masonry( container, {
+// options
+columnWidth: '.large-4',
+itemSelector: '.widget-container'
+});
+});
+</script>
 </body>
 </html>
