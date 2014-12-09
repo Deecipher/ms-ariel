@@ -2,6 +2,8 @@
 
 $(document).ready(function(){
 
+	console.log('this got loaded');
+
 	// // initialize Masonry
 	// var $container = $('#dashboard').masonry();
 	// // layout Masonry again after all images have loaded
@@ -102,102 +104,100 @@ $(document).ready(function(){
 
 
 	// Review Data Specific Functions
-	// Close the "Loading" screen by clicking on the loading icon
+	// Close the "Loading" screen by clicking on the loading icon and add in the interactive functionalities
 	$('#processing svg').on('click',function() {
 		$('#processing').hide();
 		$('#processing-summary').hide();
 		$('#tab-content').show();
 		$('#total-summary').show();
-	});
 
+		// Add .warning and .error classes to table rows that contain certain words
+		$('tr').each(function(){
+			if($('td:contains("Field")', this).length){
+				$(this).addClass('warning');
+			}
+			if($('td:contains("Critical")', this).length){
+				$(this).addClass('error');
+			}
+		});
+
+		// Add <span class="color-block"></span> to the first td in the error listing and impacted member tables
+		$('#error-listing-table td:first-child, #impacted-table td:first-child').prepend('<span class="color-block"></span>');
+
+		// Show / hide corresponding sidebar and highlight table row
+		$('tr').on('click',function() {
+			if( $('#error-list-panel').is(":visible") && $(this).hasClass('warning') ) {
+				// Hide all other widgets and show the data entry widget
+				$('#error-list-warning').siblings().hide();
+				$('#error-list-warning').show();
+				// Remove any highlights on the table data
+				$(this).siblings().removeClass('highlight');
+				$(this).addClass('highlight');
+				$('.secondary').find('.edit').hide();
+				$('.secondary').find('.cancel-save').hide();
+				$('.secondary').find('.summary').show();
+			} else if( $('#error-list-panel').is(":visible") && $(this).hasClass('error') ) {
+				// Hide all other widgets and show the data entry widget
+				$('#error-list-error').siblings().hide();
+				$('#error-list-error').show();
+				// Remove any highlights on the table data
+				$(this).siblings().removeClass('highlight');
+				$(this).addClass('highlight');
+				$('.secondary').find('.edit').hide();
+				$('.secondary').find('.cancel-save').hide();
+				$('.secondary').find('.summary').show();
+			} if( $('#impacted-list-panel').is(":visible") && $(this).hasClass('warning') ) {
+				// Hide all other widgets and show the data entry widget
+				$('#impacted-list-warning').siblings().hide();
+				$('#impacted-list-warning').show();
+				// Remove any highlights on the table data
+				$(this).siblings().removeClass('highlight');
+				$(this).addClass('highlight');
+				$('.secondary').find('.edit').hide();
+				$('.secondary').find('.cancel-save').hide();
+				$('.secondary').find('.summary').show();
+			} else if( $('#impacted-list-panel').is(":visible") && $(this).hasClass('error') ) {
+				// Hide all other widgets and show the data entry widget
+				$('#impacted-list-error').siblings().hide();
+				$('#impacted-list-error').show();
+				// Remove any highlights on the table data
+				$(this).siblings().removeClass('highlight');
+				$(this).addClass('highlight');
+				$('.secondary').find('.edit').hide();
+				$('.secondary').find('.cancel-save').hide();
+				$('.secondary').find('.summary').show();
+			} else if( $('#view-all-panel').is(":visible")) {
+				// Hide all other widgets and show the data entry widget
+				$('#view-all-edit').siblings().hide();
+				$('#view-all-edit').show();
+				// Remove any highlights on the table data
+				$(this).siblings().removeClass('highlight');
+				$(this).addClass('highlight');
+				$('.secondary').find('.edit').hide();
+				$('.secondary').find('.cancel-save').hide();
+				$('.secondary').find('.summary').show();
+			}
+		});
+
+		// Close the "#line-summary" widget view by clicking on the "Cancel" or "Save" button.
+		$('.close-line-summary, .action').click(function(){
+			$('#total-summary').siblings().hide();
+			$('#total-summary').show();
+			$('tbody tr').removeClass('highlight');
+			$('.secondary').find('.edit').hide();
+			$('.secondary').find('.cancel-save').hide();
+			$('.secondary').find('.summary').show();
+		});
 	
-	// Add .warning and .error classes to table rows that contain certain words
-	$('tr').each(function(){
-		if($('td:contains("Field")', this).length){
-			$(this).addClass('warning');
-		}
-		if($('td:contains("Critical")', this).length){
-			$(this).addClass('error');
-		}
+		// Clicking edit reveals the editing inputs
+		$('.edit-button').click( function() {
+			$(this).siblings('dl').find('.summary').hide();
+			$(this).siblings('dl').find('.edit').show();
+			$(this).siblings('dl').find('.cancel-save').show();
+		});
+
 	});
 
-	
-	// Clicking edit reveals the editing inputs
-	$('.edit-button').click( function() {
-		$(this).siblings('dl').find('.summary').hide();
-		$(this).siblings('dl').find('.edit').show();
-		$(this).siblings('dl').find('.cancel-save').show();
-	});
-
-	
-	// Add <span class="color-block"></span> to the first td in the error listing and impacted member tables
-	$('#error-listing-table td:first-child, #impacted-table td:first-child').prepend('<span class="color-block"></span>');
-
-
-	// Show / hide corresponding sidebar and highlight table row
-	$('tr').on('click',function() {
-		if( $('#error-list-panel').is(":visible") && $(this).hasClass('warning') ) {
-			// Hide all other widgets and show the data entry widget
-			$('#error-list-warning').siblings().hide();
-			$('#error-list-warning').show();
-			// Remove any highlights on the table data
-			$(this).siblings().removeClass('highlight');
-			$(this).addClass('highlight');
-			$('.secondary').find('.edit').hide();
-			$('.secondary').find('.cancel-save').hide();
-			$('.secondary').find('.summary').show();
-		} else if( $('#error-list-panel').is(":visible") && $(this).hasClass('error') ) {
-			// Hide all other widgets and show the data entry widget
-			$('#error-list-error').siblings().hide();
-			$('#error-list-error').show();
-			// Remove any highlights on the table data
-			$(this).siblings().removeClass('highlight');
-			$(this).addClass('highlight');
-			$('.secondary').find('.edit').hide();
-			$('.secondary').find('.cancel-save').hide();
-			$('.secondary').find('.summary').show();
-		} if( $('#impacted-list-panel').is(":visible") && $(this).hasClass('warning') ) {
-			// Hide all other widgets and show the data entry widget
-			$('#impacted-list-warning').siblings().hide();
-			$('#impacted-list-warning').show();
-			// Remove any highlights on the table data
-			$(this).siblings().removeClass('highlight');
-			$(this).addClass('highlight');
-			$('.secondary').find('.edit').hide();
-			$('.secondary').find('.cancel-save').hide();
-			$('.secondary').find('.summary').show();
-		} else if( $('#impacted-list-panel').is(":visible") && $(this).hasClass('error') ) {
-			// Hide all other widgets and show the data entry widget
-			$('#impacted-list-error').siblings().hide();
-			$('#impacted-list-error').show();
-			// Remove any highlights on the table data
-			$(this).siblings().removeClass('highlight');
-			$(this).addClass('highlight');
-			$('.secondary').find('.edit').hide();
-			$('.secondary').find('.cancel-save').hide();
-			$('.secondary').find('.summary').show();
-		} else if( $('#view-all-panel').is(":visible")) {
-			// Hide all other widgets and show the data entry widget
-			$('#view-all-edit').siblings().hide();
-			$('#view-all-edit').show();
-			// Remove any highlights on the table data
-			$(this).siblings().removeClass('highlight');
-			$(this).addClass('highlight');
-			$('.secondary').find('.edit').hide();
-			$('.secondary').find('.cancel-save').hide();
-			$('.secondary').find('.summary').show();
-		}
-	});
-
-	// Close the "#line-summary" widget view by clicking on the "Cancel" or "Save" button.
-	$('.close-line-summary, .action').click(function(){
-		$('#total-summary').siblings().hide();
-		$('#total-summary').show();
-		$('tbody tr').removeClass('highlight');
-		$('.secondary').find('.edit').hide();
-		$('.secondary').find('.cancel-save').hide();
-		$('.secondary').find('.summary').show();
-	});
 });
 
 
