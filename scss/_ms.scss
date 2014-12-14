@@ -185,6 +185,9 @@ blockquote {
 hr {
 	margin: 2rem 0;
 }
+.asterisk {
+	color: $blue;
+}
 
 ///////////////////////////////////////
 // NAV / HEADER / FOOTER /////////////
@@ -528,6 +531,19 @@ footer {
 	}
 }
 
+// Helper Classes
+
+.margin-bottom {
+	margin-bottom: 2rem !important;
+}
+
+.mandatory {
+	content: "*";
+	color: $blue;
+	position: absolute;
+	margin: -7px 0 0 5px;
+} 
+
 // Buttons
 
 .ms-button {
@@ -613,6 +629,22 @@ footer {
 		height: 20px;
 		width: 20px;
 		margin-left: 0.25rem;
+	}
+}
+
+.search {
+	// border: 1px solid $grey-light;
+	input {
+		margin-bottom: 0;
+	}
+	.postfix {
+		background: $blue;
+		border: none;
+		svg {
+			height: 21px;
+			width: 21px;
+			margin-top: 0.5rem;
+		}
 	}
 }
 
@@ -1336,21 +1368,6 @@ table {
 					background: $red;
 				}
 			}
-			.search {
-				// border: 1px solid $grey-light;
-				input {
-					margin-bottom: 0;
-				}
-				.postfix {
-					background: $blue;
-					border: none;
-					svg {
-						height: 21px;
-						width: 21px;
-						margin-top: 0.5rem;
-					}
-				}
-			}			
 		}
 	}
 	.tabs {
@@ -1773,6 +1790,64 @@ table {
 					}
 				}
 			}
+		}
+	}
+}
+.collection-enter-data {
+	.key1 {
+		list-style: none;
+		color: $body;
+		margin: 0;
+		float: left;
+		li {
+			padding: .5rem 0;
+			border-bottom: none;
+			line-height: 1.8rem;
+			&:hover {
+				background: none;
+			}
+		}
+	}
+	.data1 {
+		list-style: none;
+		color: $body;
+		margin: 0.75rem 0 1.25rem 13.5rem;
+		li {
+			padding: .5rem 0;
+			border-bottom: none;
+			line-height: 1.8rem;
+			input, select {
+				height: 1.8rem;
+				margin-bottom: 0;
+				padding: 0.25rem 0.5rem;
+				display: inline-block;
+				width: 90%;
+			}
+			&:hover {
+				background: none;
+			}
+		}
+	}
+	.misc-data {
+		margin-left: 0;
+		li {
+			list-style-type: none;
+		}
+		input[type="checkbox"] {
+			margin-right: 10px;
+		}
+	}
+	.cancel {
+		font-size: 1rem;
+		color: $blue-dark;
+		text-decoration: none;
+		position: relative;
+		top: .33rem;
+		cursor: pointer;
+		margin-bottom: 1.25rem;
+		display: inline-block;
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 }

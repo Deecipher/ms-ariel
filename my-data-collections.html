@@ -1,0 +1,339 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Data Collection - My Data Collections | Ariel DB | MS</title>
+	<link rel="stylesheet" href="css/app.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet' type='text/css'>
+	<script src="bower_components/modernizr/modernizr.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<!-- <script src="./js/masonry.pkgd.min.js"></script> -->
+</head>
+<body>
+
+	<div id="nav">
+		<div id="nav-bg"></div>
+		<ul>
+			<li>
+				<a id="opn-cls">
+					<div class="icon menu"></div>
+				</a>
+			</li>
+			<li>
+				<a href="./dashboard.html">
+					<div class="icon dashboard"></div>
+					<span class="title">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<div>
+					<div class="icon members"></div>
+					<span class="title">Members</span>
+					<div class="subnav">
+						<div class="indicator">
+							<img src="./css/img/ariel_menu-active-indicator-l.svg" alt="">
+						</div>
+						<ul>
+							<li><a href="#">Link 1</a></li>
+							<li><a href="#">Link 2</a></li>
+							<li><a href="#">Link 3</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div>
+					<div class="icon messages"></div>
+					<span class="title">My Secure Messages</span>
+					<div class="subnav">
+						<div class="indicator">
+							<img src="./css/img/ariel_menu-active-indicator-l.svg" alt="">
+						</div>
+						<ul>
+							<li><a href="#">Link 1</a></li>
+							<li><a href="#">Link 2</a></li>
+							<li><a href="#">Link 3</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="active">
+					<div class="icon process active"></div>
+					<span class="title">Process Management</span>
+					<div class="subnav">
+						<div class="indicator">
+							<img src="./css/img/ariel_menu-active-indicator-l.svg" alt="">
+						</div>
+						<ul>
+							<li><a href="./data-collection-id.html">Data Collection</a></li>
+							<li><a href="#">Member Processes</a></li>
+							<li><a href="#">Remittances</a></li>
+							<li><a href="#">Education Workshop</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a href="#">
+					<div class="icon reports"></div>
+					<span class="title">Reports &amp; Documents</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="icon admin"></div>
+					<span class="title">Administration</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="icon help"></div>
+					<span class="title">Help</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="page-container">
+
+		<!-- HEADER -->
+		<header class="row">
+			<div class="large-4 columns">
+				<!-- Client Logo -->
+				<img id="logo" src="./css/img/logo.gif" alt="Client Logo">
+			</div>
+			<div class="large-8 columns">
+				<!-- Secondary Nav Items -->
+				<div id="nav-sec">
+					<div class="search">
+						<div class="search-input"><input type="text" placeholder="Search"></div>
+						<a href="#" class="search-submit"><img src="./css/img/ariel_second-nav-search.svg" alt="Search"></a>
+					</div>
+					<div class="lang">
+						<a href="#" class="active">EN</a> <a href="#">FR</a>
+					</div>
+					<div class="account">
+						company name &nbsp;|&nbsp; name.lastname &nbsp;&nbsp;<img src="./css/img/ariel_second-nav-user.svg" alt="User">
+					</div>
+				</div>
+			</div>
+			<div class="large-12 columns">
+				<!-- Page Title -->
+				<div class="breadcrumb">
+					<a href="./dashboard.html">Dashboard</a> &raquo; <a href="#">Process management</a> &raquo; My Data Collections
+				</div>
+				<h1>My Data Collections</h1>
+			</div>
+		</header>
+
+		<!-- Content Container -->
+		<div class="row">
+			<div class="large-8 columns main">
+				<div class="row margin-bottom">
+					<div class="large-6 columns">
+						<div class="row collapse search">
+							<div class="small-10 columns">
+								<input type="text" placeholder="Search data collection">
+							</div>
+							<div class="small-2 columns text-center">
+								<a class="botton postfix" href="#">
+									<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve">
+									<path fill="#FFFFFF" d="M14.9,13.1l-3.8-3.8c0.6-0.9,1-2.1,1-3.3C12.1,2.7,9.4,0,6.1,0C2.7,0,0,2.7,0,6.1c0,3.3,2.7,6.1,6.1,6.1
+									c1.2,0,2.3-0.4,3.3-1l3.8,3.8c0.1,0.1,0.3,0.1,0.5,0l1.4-1.4C15,13.4,15,13.2,14.9,13.1z M1.9,6.1c0-2.3,1.9-4.1,4.1-4.1
+									c2.3,0,4.1,1.9,4.1,4.1c0,2.3-1.9,4.1-4.1,4.1C3.8,10.2,1.9,8.3,1.9,6.1z"/>
+								</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div  class="small-5 small-offset12 columns text-center tabs">
+						<div id="manual-entry">
+							<div class="plus">+</div>
+							<div class="title">Create new Data Collection</div>
+						</div>
+					</div>
+				</div>
+				<div class="content" id="full-collection-panel">
+					<div id="full-collection-table"></div>
+					<div class="row">
+						<div class="small-12 columns text-center">
+							<div class="pager">
+								<div class="row">
+									<div class="small-12 columns">		
+										<a class="prev" href="#"></a>
+										<span>1 of 3</span>
+										<a class="next" href="#"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="large-4 columns secondary review">
+				
+				<div id="collection-item-summary">
+					<div class="widget">
+						<h2>Division 123 - March 2014</h2>
+						<div class="content data-summary total-summary">
+							<ul class="key1">
+								<li>Plan:</li>
+								<li>Name:</li>
+								<li>Configuration:</li>
+								<li>Start date:</li>
+								<li>End date:</li>
+								<li>Effective date:</li>
+								<li>Status:</li>
+							</ul>
+							<ul class="data1">
+								<li>PSPP</li>
+								<li>Division 123 - April 2014</li>
+								<li>Single member creation</li>
+								<li>2014-04-01</li>
+								<li>2014-04-30</li>
+								<li>&nbsp;</li>
+								<li>Started</li>
+							</ul>
+							<div class="subtitle">Data entry summary</div>
+							<ul class="key2">
+								<li>DIV123-Dept1-APR2014.csv</li>
+								<li>DIV123-Dept1-APR2014.csv</li>
+								<li>Manual entries</li>
+								<li class="total">Total records:</li>
+								<li class="warnings"><span class="color-block"></span>Warnings:</li>
+								<li class="errors"><span class="color-block"></span>Critical errors:</li>
+							</ul>
+							<ul class="data2">
+								<li>67 records</li>
+								<li>17 records</li>
+								<li>3 records</li>
+								<li class="total">92</li>
+								<li class="warnings">2</li>
+								<li class="errors">0</li>
+							</ul>
+							<div class="ms-portal-button-cancel small">Delete</div>
+							<a href="#" class="ms-portal-button right">Continue</a>
+						</div>
+					</div>
+				</div>
+				<div id="data-entry">
+					<div class="widget collection-enter-data">
+						<h2>Data Collection Summary</h2>
+							<div class="content data-summary total-summary">
+								<div class="row margin-bottom">
+									<div class="small-12 columns">
+										<span class="asterisk">*</span> <em>Mandatory fields</em>
+									</div>
+								</div>
+								<ul class="key1">
+									<li><b>Plan type:</b></li>
+									<li><b>Last name:</b></li>
+									<li><b>Configuration:</b></li>
+									<li><b>Contribution:</b></li>
+									<li><b>Start date:</b></li>
+									<li><b>Effective date:</b></li>
+									<li><b>End date:</b></li>
+								</ul>
+								<ul class="data1">
+									<li>
+										<select>
+											<option value="PSPP">PSPP</option>
+											<option value="ETGH">ETGH</option>
+										</select>
+										<span class="mandatory">*</span>
+									</li>
+									<li><input type="text"><span class="mandatory">*</span></li>
+									<li><input type="text"><span class="mandatory">*</span></li>
+									<li><input type="text"></li>
+									<li><input type="text"><span class="mandatory">*</span></li>
+									<li><input type="text"></li>
+									<li><input type="text"><span class="mandatory">*</span></li>
+								</ul>
+								<ul class="misc-data">
+									<li><input type="checkbox"> Annual process</li>
+									<li><input type="checkbox"> One line per member</li>
+									<li><input type="checkbox"> Approval required</li>
+								</ul>
+								<div class="row">
+									<div class="medium-6 columns">
+										<div class="close-line-summary cancel">Cancel</div>
+									</div>
+									<div class="medium-6 columns text-right">
+										<div class="ms-portal-button close-line-summary">Create</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<div class="row">
+			<div class="large-12 columns">
+				<footer>
+					<div class="aux-footer">
+						<nav class="legal-menu">
+							<ul class="menu">
+								<li><a href="#">Privacy</a></li>
+								<li><a href="#">Terms of Use</a></li>
+								<li><a href="#" class="last">Accessibility</a></li>
+							</ul>
+						</nav>
+						<div class="copyright">&copy; 1996-2014 Morneau Shepell Ltd</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+	</div><!-- END #page-container -->
+
+	<script>
+	// View All Data
+    d3.csv("full-collection.csv" + '?' + Math.floor(Math.random() * 100000	), function(data) {
+		// the columns you'd like to display
+		var columns = ["Plan", "Name", "Status"];
+
+		var table = d3.select("#full-collection-table").append("table"),
+		thead = table.append("thead"),
+		tbody = table.append("tbody");
+
+		// append the header row
+		thead.append("tr")
+		.selectAll("th")
+		.data(columns)
+		.enter()
+		.append("th")
+		.text(function(column) { return column; });
+
+		// create a row for each object in the data
+		var rows = tbody.selectAll("tr")
+		.data(data)
+		.enter()
+		.append("tr");
+
+		// create a cell in each row for each column
+		var cells = rows.selectAll("td")
+		.data(function(row) {
+			return columns.map(function(column) {
+				return {column: column, value: row[column]};
+			});
+		})
+		.enter()
+		.append("td")
+		.text(function(d) { return d.value; });
+	});
+    </script>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ms.js"></script>
+</body>
+</html>

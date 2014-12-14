@@ -59,6 +59,15 @@ $(document).ready(function(){
 			$(this).addClass('highlight');
 		}
 	});
+	// Also Highlight rows for full collection table
+	$('#full-collection-panel').on('click','tbody tr',function() {
+		if( $(this).hasClass('highlight') ) {
+			// Do nothing
+		} else {
+			$(this).siblings().removeClass('highlight');
+			$(this).addClass('highlight');
+		}
+	});
 
 
 	// Table Click to show data entry sidebar
@@ -70,6 +79,7 @@ $(document).ready(function(){
 			$('#data-entry').show();
 			// Remove any highlights on the table data
 			$('#inputdata-table tbody tr').removeClass('highlight');
+			$('#full-collection-table tbody tr').removeClass('highlight');
 			// Highlight manual entry button
 			$('#manual-entry').addClass('active');
 		}
@@ -80,6 +90,8 @@ $(document).ready(function(){
 	$('.close-line-summary').click(function(){
 		$('#total-summary').siblings().hide();
 		$('#total-summary').show();
+		$('#collection-item-summary').siblings().hide();
+		$('#collection-item-summary').show();
 		$('#inputdata-table tbody tr').removeClass('highlight');
 		$('#manual-entry').removeClass('active');
 	});

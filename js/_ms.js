@@ -41,6 +41,15 @@ $(document).ready(function(){
 			$(this).addClass('highlight');
 		}
 	});
+	// Also Highlight rows for full collection table
+	$('#full-collection-panel').on('click','tbody tr',function() {
+		if( $(this).hasClass('highlight') ) {
+			// Do nothing
+		} else {
+			$(this).siblings().removeClass('highlight');
+			$(this).addClass('highlight');
+		}
+	});
 });
 
 // Table Click to show data entry sidebar
