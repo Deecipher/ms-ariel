@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 17.9 25" style="enable-background:new 0 0 17.9 25;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st1{fill:#FFFFFF;}
-	.st2{fill:#00ACCD;}
-	.st3{fill:#B3B3B3;}
-	.st4{fill:#006472;}
-	.st5{fill:#E5E5E5;}
-	.st6{fill:#003239;}
-	.st7{fill:#FFCC00;}
-	.st8{fill:#FF3300;}
-	.st9{fill:#F7921E;}
-	.st10{fill:#646464;}
-</style>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="612px" height="792px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  width="566.281" height="792" y="0.5" x="21.964" bottomLeftOrigin="true"></sliceSourceBounds>
+	</sfw>
+</metadata>
 <g>
-	<path class="st2" d="M17.8,6.2L17.8,6.2l-6-6C11.7,0,11.6,0,11.5,0h-11C0.2,0,0,0.2,0,0.4v24.1C0,24.8,0.2,25,0.4,25h17
-		c0.2,0,0.4-0.2,0.4-0.4V6.5C17.9,6.3,17.9,6.2,17.8,6.2z M11.9,1.5L16.4,6h-4.5V1.5z M17,24.1H0.9V0.9H11v5.6
-		c0,0.2,0.2,0.4,0.4,0.4H17V24.1z"/>
-	<path class="st2" d="M3,10.6c0,0.2,0.2,0.4,0.4,0.4h11c0.2,0,0.4-0.2,0.4-0.4c0-0.2-0.2-0.4-0.4-0.4h-11C3.2,10.2,3,10.4,3,10.6z"
-		/>
-	<path class="st2" d="M14.5,13.5h-11c-0.2,0-0.4,0.2-0.4,0.4c0,0.2,0.2,0.4,0.4,0.4h11c0.2,0,0.4-0.2,0.4-0.4
-		C14.9,13.7,14.7,13.5,14.5,13.5z"/>
-	<path class="st2" d="M14.5,16.7h-11c-0.2,0-0.4,0.2-0.4,0.4c0,0.2,0.2,0.4,0.4,0.4h11c0.2,0,0.4-0.2,0.4-0.4
-		C14.9,16.9,14.7,16.7,14.5,16.7z"/>
-	<path class="st2" d="M14.5,20h-11C3.2,20,3,20.2,3,20.4c0,0.2,0.2,0.4,0.4,0.4h11c0.2,0,0.4-0.2,0.4-0.4C14.9,20.2,14.7,20,14.5,20
-		z"/>
+	<path fill="#163752" d="M586.368,196.416L586.368,196.416L396.288,6.336C393.12,0,389.952,0,386.784,0H38.304
+		c-9.504,0-15.84,6.336-15.84,12.672V776.16c0,9.504,6.336,15.84,12.672,15.84h538.56c6.336,0,12.672-6.336,12.672-12.672V205.92
+		C589.536,199.584,589.536,196.416,586.368,196.416z M399.456,47.52l142.56,142.56h-142.56V47.52z M561.024,763.488H50.976V28.512
+		h319.968V205.92c0,6.336,6.336,12.672,12.672,12.672h177.408V763.488z"/>
+	<path fill="#163752" d="M117.504,335.808c0,6.336,6.336,12.672,12.672,12.672h348.48c6.336,0,12.672-6.336,12.672-12.672
+		s-6.336-12.672-12.672-12.672h-348.48C123.84,323.136,117.504,329.472,117.504,335.808z"/>
+	<path fill="#163752" d="M481.824,427.68h-348.48c-6.336,0-12.672,6.336-12.672,12.672s6.336,12.673,12.672,12.673h348.48
+		c6.336,0,12.672-6.337,12.672-12.673S488.16,427.68,481.824,427.68z"/>
+	<path fill="#163752" d="M481.824,529.056h-348.48c-6.336,0-12.672,6.336-12.672,12.673c0,6.336,6.336,12.672,12.672,12.672h348.48
+		c6.336,0,12.672-6.336,12.672-12.672C494.496,535.392,488.16,529.056,481.824,529.056z"/>
+	<path fill="#163752" d="M481.824,633.6h-348.48c-9.504,0-15.84,6.336-15.84,12.672c0,6.337,6.336,12.673,12.672,12.673h348.48
+		c6.336,0,12.672-6.336,12.672-12.673C494.496,639.936,488.16,633.6,481.824,633.6z"/>
 </g>
 </svg>

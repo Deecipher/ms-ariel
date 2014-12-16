@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 25 22" style="enable-background:new 0 0 25 22;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st1{fill:#FFFFFF;}
-	.st2{fill:#00ACCD;}
-	.st3{fill:#B3B3B3;}
-	.st4{fill:#006472;}
-	.st5{fill:#E5E5E5;}
-	.st6{fill:#003239;}
-	.st7{fill:#FFCC00;}
-	.st8{fill:#FF3300;}
-	.st9{fill:#F7921E;}
-	.st10{fill:#646464;}
-</style>
-<path class="st2" d="M24.6,3h-5.9l-2.9-2.9C15.7,0,15.6,0,15.5,0H3.4C3.3,0,3.2,0,3.1,0.1l-3,3C0,3.2,0,3.3,0,3.4v18.2
-	C0,21.8,0.2,22,0.4,22h24.2c0.2,0,0.4-0.2,0.4-0.4V3.4C25,3.2,24.8,3,24.6,3z M3.6,0.8h11.8l2.9,2.9c0.1,0.1,0.2,0.1,0.3,0.1h5.7
-	v1.5H0.8V3.6L3.6,0.8z M0.8,21.2v-15h23.4v15H0.8z"/>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="612px" height="792px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  width="612" height="538.561" y="127.22" x="-0.5" bottomLeftOrigin="true"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<path fill="#163752" d="M602.208,200.16H457.776l-70.992-70.992c-2.448-2.448-4.896-2.448-7.344-2.448H83.232
+	c-2.448,0-4.896,0-7.344,2.448l-73.44,73.44C0,205.056,0,207.504,0,209.952v445.536c0,4.896,4.896,9.792,9.792,9.792h592.416
+	c4.896,0,9.792-4.896,9.792-9.792V209.952C612,205.056,607.104,200.16,602.208,200.16z M88.128,146.304h288.864l70.992,70.992
+	c2.447,2.448,4.896,2.448,7.344,2.448h139.536v36.72H19.584v-41.616L88.128,146.304z M19.584,645.696v-367.2h572.832v367.2H19.584z"
+	/>
 </svg>
