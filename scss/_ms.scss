@@ -1121,6 +1121,51 @@ table {
 	}
 }
 
+// Expanded widget
+.widget-container.large-12  {
+	.content.message-list {
+		width: 33.333%;
+		display: inline-block;
+		max-height: 300px;
+		overflow-y: scroll;
+		.pager {
+			display: none;
+		}
+		li.active {
+			background-color: $blue;
+			color: white;
+			a, .subject, .date-stamp {
+				color: white;
+			}
+		}
+	}
+	.content.detail {
+		width: 65%;
+		display: inline-block;
+		vertical-align: top;
+		max-height: 300px;
+		overflow-y: scroll;
+	}
+}
+.widget-container {
+	.overflow-off {
+		display: none;
+	}
+	.overflow-on {
+		display: block;
+	}
+}
+.email-head {
+	border-bottom: 1px solid $grey-light;
+	padding: 0.875rem;
+}
+.email-controls {
+	float: right;
+}
+.email-body {
+	padding: 0.875rem;
+}
+
 // Accordion Widgets (ie. Member Processing, My Documents & Reports)
 
 .widget{

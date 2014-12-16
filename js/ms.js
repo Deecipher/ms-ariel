@@ -210,31 +210,21 @@ $(document).ready(function(){
 
 	});
 
+	// Expand Widget to full width when toggle clicked
+	$('.widget-expand').click( function() {
+		$(this).parents('.widget-container').toggleClass('large-4');
+		$(this).parents('.widget-container').toggleClass('large-12');
+		$(this).siblings('.overflow-off').toggleClass('overflow-on');
+		$(this).siblings().children('.overflow-off').toggleClass('overflow-on');
+		// trigger layout
+  		msnry.layout();
+	});
+	// $('.widget .message-list li').click( function() {
+	// 	$(this).toggleClass('active');
+	// });
+
+	$("#dashboard").on("click", ".large-12 .message-list li", function() {
+		$(this).addClass('active');
+		$(this).siblings().removeClass('active');
+	});
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
