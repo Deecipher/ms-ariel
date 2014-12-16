@@ -215,7 +215,7 @@ $(document).ready(function(){
 	});
 
 	// Expand Widget to full width when toggle clicked
-	$('.widget-expand').click( function() {
+	$('.widget-expand').click( function(event) {
 		$(this).parents('.widget-container').toggleClass('large-4');
 		$(this).parents('.widget-container').toggleClass('large-12');
 		$(this).siblings('.overflow-off').toggleClass('overflow-on');
@@ -223,6 +223,12 @@ $(document).ready(function(){
 		$(this).toggleClass('widget-contract');
 		// trigger layout
   		msnry.layout();
+  		// Focus on item after open or close
+  		setTimeout(function (){
+             $('html, body').animate({
+				scrollTop: $(event.target).parents('.widget-container').offset().top
+			}, 1000);
+         }, 400);  		
 	});
 
 	// Toggle message activation state for expanded widgets
