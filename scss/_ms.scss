@@ -878,11 +878,15 @@ table {
 }
 #full-collection-table {
 	.highlight:after {
-		content: "";
+		content: '';
+		background-image: url('img/ariel_highlight-arrow.svg');
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		right: -4px;
 		position: absolute;
-		border-top: rem-calc(25px) solid transparent;
-		border-bottom: rem-calc(25px) solid transparent;
-		border-left: rem-calc(15px) solid $blue;
+		width: 1.8rem;
+		height: rem-calc(49px);
+		margin: 1px 0;
 	}
 }
 
@@ -1523,12 +1527,14 @@ table {
 					color: $white;
 				}
 				&:after {
-					content: "";
-					position: absolute;
+					content: '';
+					background-image: url('img/ariel_highlight-arrow.svg');
+					background-size: 100% 100%;
+					background-repeat: no-repeat;
 					right: 0;
-					border-top: rem-calc(18px) solid transparent;
-					border-bottom: rem-calc(18px) solid transparent;
-					border-left: 0.9375rem solid $blue;
+					position: absolute;
+					width: 1.5rem;
+					height: rem-calc(35px);
 				}
 			}
 		}

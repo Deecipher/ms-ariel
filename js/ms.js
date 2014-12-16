@@ -68,9 +68,11 @@ $(document).ready(function(){
 			$(this).addClass('highlight');
 		}
 	});
-	// Always start with first row highlighted
-	$('#full-collection-table tbody tr:first-child').addClass('highlight');
 
+	// Always start with first row highlighted
+	$('#full-collection-table').ready(function() {
+		$('#full-collection-table tbody tr:first-child').addClass('highlight');
+	});
 
 	// Table Click to show data entry sidebar
 
@@ -236,4 +238,5 @@ $(document).ready(function(){
 		    e.preventDefault();
 		}
 	});
+
 });
