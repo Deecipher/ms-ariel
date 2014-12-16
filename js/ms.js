@@ -68,6 +68,8 @@ $(document).ready(function(){
 			$(this).addClass('highlight');
 		}
 	});
+	// Always start with first row highlighted
+	$('#full-collection-table tbody tr:first-child').addClass('highlight');
 
 
 	// Table Click to show data entry sidebar
@@ -216,15 +218,22 @@ $(document).ready(function(){
 		$(this).parents('.widget-container').toggleClass('large-12');
 		$(this).siblings('.overflow-off').toggleClass('overflow-on');
 		$(this).siblings().children('.overflow-off').toggleClass('overflow-on');
+		$(this).toggleClass('widget-contract');
 		// trigger layout
   		msnry.layout();
 	});
-	// $('.widget .message-list li').click( function() {
-	// 	$(this).toggleClass('active');
-	// });
 
-	$("#dashboard").on("click", ".large-12 .message-list li", function() {
+	// Toggle message activation state for expanded widgets
+	$("#page-container").on("click", ".large-12 .message-list li", function() {
 		$(this).addClass('active');
 		$(this).siblings().removeClass('active');
+	});
+	// Disable default link behaviour when the messages widget is expanded
+	$('.message-list li a').click(function(e) {
+		if ($('.message-list li a').parents().hasClass('large-12')) {
+		
+		    // Cancel the default action
+		    e.preventDefault();
+		}
 	});
 });
