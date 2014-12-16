@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st1{fill:#FFFFFF;}
-	.st2{fill:#00ACCD;}
-	.st3{fill:#B3B3B3;}
-	.st4{fill:#006472;}
-	.st5{fill:#E5E5E5;}
-	.st6{fill:#003239;}
-	.st7{fill:#FFCC00;}
-	.st8{fill:#FF3300;}
-	.st9{fill:#F7921E;}
-	.st10{fill:#646464;}
-</style>
+	 width="612px" height="792px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
 <g>
-	<path class="st2" d="M15,30C6.7,30,0,23.3,0,15S6.7,0,15,0c8.3,0,15,6.7,15,15S23.3,30,15,30z M15,1.1C7.3,1.1,1.1,7.3,1.1,15
-		S7.3,28.9,15,28.9c7.7,0,13.9-6.2,13.9-13.9S22.7,1.1,15,1.1z"/>
+	<path fill="#94C72F" d="M306,702C136.68,702,0,565.32,0,396C0,226.68,136.68,90,306,90c169.32,0,306,136.68,306,306
+		C612,565.32,475.32,702,306,702z M306,112.44C148.92,112.44,22.44,238.92,22.44,396S148.92,679.56,306,679.56
+		S589.56,553.08,589.56,396S463.08,112.44,306,112.44z"/>
 	<g>
-		<path class="st2" d="M15.5,16l-0.2,2.8l-1.6,0.4l-0.4-4.6l1.1-0.5c2.6-1.1,3.8-2,3.8-3.8c0-1.7-1.4-2.7-3.2-2.7
-			c-2.2,0-3.9,1-5.4,2.2L9.2,7.3c1.7-1.3,3.7-2.1,5.9-2.1c3.4,0,5.7,1.9,5.7,4.9C20.8,13.2,18.8,14.5,15.5,16z M13.1,24.8v-3.3h2.8
-			v3.3H13.1z"/>
+		<path fill="#94C72F" d="M316.2,416.4l-4.08,57.119l-32.64,8.16l-8.16-93.84l22.44-10.2c53.04-22.44,77.521-40.8,77.521-77.52
+			c0-34.68-28.561-55.08-65.28-55.08c-44.88,0-79.56,20.4-110.16,44.88l-8.16-51c34.68-26.52,75.48-42.84,120.36-42.84
+			c69.36,0,116.28,38.76,116.28,99.96C424.32,359.28,383.52,385.8,316.2,416.4z M267.24,595.92V528.6h57.12v67.32H267.24z"/>
 	</g>
 </g>
 </svg>

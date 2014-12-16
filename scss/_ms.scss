@@ -6,11 +6,11 @@
 
 // Colours
 
-$blue: #00ACCD;
+$blue: #0F6292;
 $blue-light: #92D7E7;
-$blue-dark: #006472;
+$blue-dark: #163752;
 
-$blue-hover: #E0F5F9;
+$blue-hover: #CEDFE9;
 
 $purple: #9E3D96;
 $purple-light: #CEA9CF;
@@ -226,12 +226,12 @@ hr {
 						text-decoration: none;
 						vertical-align: calc(60%);
 						&:hover {
-							color: $blue;
+							color: #94C72F;
 						}
 					}
 					&.active {
 						.title {
-							color: $blue;
+							color: #94C72F;
 						}
 					}
 					.subnav {
@@ -247,7 +247,7 @@ hr {
 		}
 	}
 	#nav-bg {
-		background: $blue-dark;
+		background: #33373C;
 		height: 100%;
 		position: fixed;
 		width: 10%;
@@ -281,7 +281,7 @@ hr {
 						top: -0.5rem;
 						font-size: 1rem;
 						color: $white;
-						background: darken($blue-dark, 9%);
+						background: #272A2E;
 						.indicator {
 							position: absolute;
 							z-index: 1001;
@@ -300,9 +300,9 @@ hr {
 									color: $white;
 								}
 								&:hover {
-									color: $blue;
+									color: #94C72F;
 									a {
-										color: $blue;
+										color: #94C72F;
 									}
 								}
 								&:last-child {
@@ -318,47 +318,62 @@ hr {
 					display: inline-block;
 					&.menu {
 						background: url('img/ariel_icon-menu.svg') no-repeat center;
+						background-size: 100% auto;
 					}
 					&.dashboard {
 						background: url('img/ariel_icon-dashboard.svg') no-repeat center;
+						background-size: 100% auto;
 						&:hover, &.active {
 							background: url('img/ariel_icon-dashboard-h.svg') no-repeat center;
+							background-size: 100% auto;
 						}
 					}
 					&.members {
 						background: url('img/ariel_icon-members.svg') no-repeat center;
+						background-size: 100% auto;
 						&:hover, &.active {
 							background: url('img/ariel_icon-members-h.svg') no-repeat center;
+							background-size: 100% auto;
 						}
 					}
 					&.messages {
 						background: url('img/ariel_icon-messages.svg') no-repeat center;
+						background-size: 100% auto;
 						&:hover, &.active {
 							background: url('img/ariel_icon-messages-h.svg') no-repeat center;
+							background-size: 100% auto;
 						}
 					}
 					&.process {
 						background: url('img/ariel_icon-process.svg') no-repeat center;
+						background-size: 100% auto;
 						&:hover, &.active {
 							background: url('img/ariel_icon-process-h.svg') no-repeat center;
+							background-size: 100% auto;
 						}
 					}
 					&.reports {
 						background: url('img/ariel_icon-reports.svg') no-repeat center;
+						background-size: auto 100%;
 						&:hover, &.active {
 							background: url('img/ariel_icon-reports-h.svg') no-repeat center;
+							background-size: auto 100%;
 						}
 					}
 					&.admin {
 						background: url('img/ariel_icon-admin.svg') no-repeat center;
+						background-size: auto 100%;
 						&:hover, &.active {
 							background: url('img/ariel_icon-admin-h.svg') no-repeat center;
+							background-size: auto 100%;
 						}
 					}
 					&.help {
 						background: url('img/ariel_icon-help.svg') no-repeat center;
+						background-size: 100% auto;
 						&:hover, &.active {
 							background: url('img/ariel_icon-help-h.svg') no-repeat center;
+							background-size: 100% auto;
 						}
 					}
 				}
@@ -372,28 +387,35 @@ hr {
 					.icon {
 						&.dashboard {
 							background: url('img/ariel_icon-dashboard-h.svg') no-repeat center;
+							background-size: 100% auto;
 						}
 						&.members {
 							background: url('img/ariel_icon-members-h.svg') no-repeat center;
+							background-size: 100% auto;
 						}
 						&.messages {
 							background: url('img/ariel_icon-messages-h.svg') no-repeat center;
+							background-size: 100% auto;
 						}
 						&.process {
 							background: url('img/ariel_icon-process-h.svg') no-repeat center;
+							background-size: 100% auto;
 						}
 						&.reports {
 							background: url('img/ariel_icon-reports-h.svg') no-repeat center;
+							background-size: auto 100%;
 						}
 						&.admin {
 							background: url('img/ariel_icon-admin-h.svg') no-repeat center;
+							background-size: auto 100%;
 						}
 						&.help {
 							background: url('img/ariel_icon-help-h.svg') no-repeat center;
+							background-size: 100% auto;
 						}
 					}
 					.title {
-						color: $blue;
+						color: #94C72F;
 					}
 				}
 			}
@@ -876,19 +898,19 @@ table {
 		}
 	}
 }
-#full-collection-table {
-	.highlight:after {
-		content: '';
-		background-image: url('img/ariel_highlight-arrow.svg');
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
-		right: -4px;
-		position: absolute;
-		width: 1.8rem;
-		height: rem-calc(49px);
-		margin: 1px 0;
-	}
-}
+// #full-collection-table {
+// 	.highlight:after {
+// 		content: '';
+// 		background-image: url('img/ariel_highlight-arrow.svg');
+// 		background-size: 100% 100%;
+// 		background-repeat: no-repeat;
+// 		right: -4px;
+// 		position: absolute;
+// 		width: 1.8rem;
+// 		height: rem-calc(49px);
+// 		margin: 1px 0;
+// 	}
+// }
 
 ///////////////////////////////////////
 // WIDGETS ///////////////////////////
@@ -1526,16 +1548,16 @@ table {
 					background: $blue;
 					color: $white;
 				}
-				&:after {
-					content: '';
-					background-image: url('img/ariel_highlight-arrow.svg');
-					background-size: 100% 100%;
-					background-repeat: no-repeat;
-					right: 0;
-					position: absolute;
-					width: 1.5rem;
-					height: rem-calc(35px);
-				}
+				// &:after {
+				// 	content: '';
+				// 	background-image: url('img/ariel_highlight-arrow.svg');
+				// 	background-size: 100% 100%;
+				// 	background-repeat: no-repeat;
+				// 	right: 0;
+				// 	position: absolute;
+				// 	width: 1.5rem;
+				// 	height: rem-calc(35px);
+				// }
 			}
 		}
 	}
